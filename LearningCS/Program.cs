@@ -24,7 +24,7 @@ namespace LearningCS
                         int i = 1;
                         foreach (string commands in allCommands)
                         {
-                            Console.WriteLine(i + "." + commands);
+                            Console.WriteLine(i + ". " + commands);
                             i++;
                         }
                         break;
@@ -45,4 +45,3 @@ namespace LearningCS
         }
     }
 }
-

@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LearningCS
 {
@@ -25,35 +21,56 @@ namespace LearningCS
                         Console.WriteLine("available commands: ");
 
                         string[] allCommands = {
-                            "'weekone'",
-                            "'weektwo'",
-                            "'weekthree'",
-                            "'weekfour'",
-                            "'weekfive'",
-                            "'weeksix'",
-                            "'weekseven'",
-                            "'weekeight'",
+                            "'1'",
+                            "'2'",
+                            "'3'",
+                            "'4'",
+                            "'5'",
+                            "'6'",
+                            "'7'",
+                            "'8'",
                             "'back' to go back to the previous menu",
                             "'quit' to exit"
                             };
                         int i = 1;
                         foreach (string commands in allCommands)
                         {
-                            Console.WriteLine(i + "." + commands);
+                            Console.WriteLine(i + ". " + commands);
                             i++;
                         }
                         break;
 
-                    case "weekone":
-                        WeekChosen(command);
+                    case "1":
+                        Console.Clear();
+                        WeekOne.ChooseTask();
                         break;
 
-                    case "weektwo":
-                        Console.WriteLine("Nothing here yet...");
+                    case "2":
+                        GoBack(NothingHere());
                         break;
 
-                    case "weekthree":
-                        Console.WriteLine("Nothing here yet...");
+                    case "3":
+                        GoBack(NothingHere());
+                        break;
+
+                    case "4":
+                        GoBack(NothingHere());
+                        break;
+
+                    case "5":
+                        GoBack(NothingHere());
+                        break;
+
+                    case "6":
+                        GoBack(NothingHere());
+                        break;
+
+                    case "7":
+                        GoBack(NothingHere());
+                        break;
+
+                    case "8":
+                        GoBack(NothingHere());
                         break;
 
                     case "quit":
@@ -70,68 +87,15 @@ namespace LearningCS
                 }
             }
         }
-        public static void WeekChosen(string param)
+
+        private static string NothingHere()
         {
-            if (string.IsNullOrEmpty(param))
-            {
-                Console.Clear();
-                Program.Main();
-            }
-            else if (param == "weekone")
-            {
-                Console.Clear();
-                WeekOne.ChooseTask();
-            }
-            else if (param == "weektwo")
-            {
-                Console.Clear();
-                Console.WriteLine("Nothing here yet...");
-                var input = Console.ReadLine();
-                GoBack(input);
-            }
-            else if (param == "weekthree")
-            {
-                Console.Clear();
-                Console.WriteLine("Nothing here yet...");
-                var input = Console.ReadLine();
-                GoBack(input);
-            }
-            else if (param == "weekfour")
-            {
-                Console.Clear();
-                Console.WriteLine("Nothing here yet...");
-                var input = Console.ReadLine();
-                GoBack(input);
-            }
-            else if (param == "weekfive")
-            {
-                Console.Clear();
-                Console.WriteLine("Nothing here yet...");
-                var input = Console.ReadLine();
-                GoBack(input);
-            }
-            else if (param == "weeksix")
-            {
-                Console.Clear();
-                Console.WriteLine("Nothing here yet...");
-                var input = Console.ReadLine();
-                GoBack(input);
-            }
-            else if (param == "weekseven")
-            {
-                Console.Clear();
-                Console.WriteLine("Nothing here yet...");
-                var input = Console.ReadLine();
-                GoBack(input);
-            }
-            else if (param == "weekeight")
-            {
-                Console.Clear();
-                Console.WriteLine("Nothing here yet...");
-                var input = Console.ReadLine();
-                GoBack(input);
-            }
+            Console.Clear();
+            Console.WriteLine("Nothing here yet...");
+            var input = Console.ReadLine();
+            return input;
         }
+
         public static void GoBack(string param)
         {
             switch (param)

@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LearningCS
 {
@@ -58,7 +54,7 @@ namespace LearningCS
                         break;
 
                     case "4":
-                        Console.WriteLine("Nothing here yet...");
+                        Task4();
                         break;
 
                     case "5":
@@ -166,39 +162,27 @@ namespace LearningCS
             Console.WriteLine("Counts the number of each letter entered.");
             Console.WriteLine("Also shows how much of the total percentage each letter used. If that makes any sense...");
             Console.WriteLine(); Console.WriteLine();
-            var range = 255;
-            var ASCIICode = new int[range];
+
+            var range = 250;
+            var counts = new int[range];
             string text = "something";
-            var totalLength = 0;
             while (!string.IsNullOrWhiteSpace(text))
             {
                 text = Console.ReadLine().ToLower();
                 foreach (var character in text ?? string.Empty)
                 {
-                    if (character == ' ')
-                    {
-                        continue;
-                    }
-                    ASCIICode[character]++;
+                    counts[(int)character]++;
                 }
-                //de første 32 tegnene i ASCII er "non-printing", så vi starter på 33
-                for (var i = 33; i < range; i++)
+                for (var i = 0; i < range; i++)
                 {
-                    if (ASCIICode[i] >= 33)
-                    {
-                        totalLength += ASCIICode[i];
-                    }
-                }
-                for (var i = 33; i < range; i++)
-                {
-                    if (ASCIICode[i] >= 33)
+                    if (counts[i] > 0)
                     {
                         var character = (char)i;
-                        var percentage = ASCIICode[i] / totalLength * 100;
-                        Console.WriteLine(character + " - " + ASCIICode[i] + ". Which is: " + percentage + "%");
+                        Console.WriteLine(character + " - " + counts[i]);
                     }
                 }
             }
+
             Console.WriteLine(); Console.WriteLine();
             Console.WriteLine("That's it. Enter 'back' to go back...");
             var input = Console.ReadLine();
