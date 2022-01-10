@@ -1,10 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace LearningCS
 {
     public class WeekOne
     {
-        static readonly Random random = new();
+        private static readonly Random Random = new();
         private static void ReturnToPreviousMenu()
         {
             Console.WriteLine("\nThat's it. Press any key to return");
@@ -79,25 +80,25 @@ namespace LearningCS
                 "Also shows how much of the total percentage each letter used. If that makes any sense...\n"
             );
 
-            int range = 255;
-            int total = 0;
-            var ASCIICode = new int[range];
-            string input = "something";
+            const int range = 255;
+            var total = 0;
+            var asciiCode = new int[range];
+            var input = "something";
             while (!string.IsNullOrWhiteSpace(input))
             {
-                input = Console.ReadLine().ToLower();
-                foreach (char character in input ?? string.Empty)
+                input = Console.ReadLine()?.ToLower();
+                foreach (var character in input ?? string.Empty)
                 {
-                    ASCIICode[(int)character]++;
+                    asciiCode[(int)character]++;
                     total++;
                 }
-                for (int i = 0; i < range; i++)
+                for (var i = 0; i < range; i++)
                 {
-                    if (ASCIICode[i] > 0)
+                    if (asciiCode[i] > 0)
                     {
-                        char character = (char)i;
-                        int totalPercentage = 100 * ASCIICode[i] / total;
-                        string output = $"{character} - {ASCIICode[i]}. Or: {totalPercentage}%";
+                        var character = (char)i;
+                        var totalPercentage = 100 * asciiCode[i] / total;
+                        var output = $"{character} - {asciiCode[i]}. Or: {totalPercentage}%";
                         Console.CursorLeft = Console.BufferWidth - output.Length - 1;
                         Console.WriteLine(output);
                     }
@@ -122,21 +123,21 @@ namespace LearningCS
             int numberTwo = 20;
             Console.WriteLine(
                 "This is the first method:\n" +
-                $"The sum of {numberOne} and {numberTwo} is {methodOne(numberOne, numberTwo)}\n"
+                $"The sum of {numberOne} and {numberTwo} is {MethodOne(numberOne, numberTwo)}\n"
             );
             Console.WriteLine(
                 "This is the second method:\n" +
-                methodTwo()
+                MethodTwo()
             );
 
-            static int methodOne(int a, int b)
+            static int MethodOne(int a, int b)
             {
-                int sum = a + b;
+                var sum = a + b;
                 return sum;
             }
-            static string methodTwo()
+            static string MethodTwo()
             {
-                string response = "This method doesn't return anything";
+                var response = "This method doesn't return anything";
                 return response;
             }
 
@@ -174,40 +175,43 @@ namespace LearningCS
             );
             HelpText(null);
 
-            string userinput = Console.ReadLine();
-            string[] arguments = userinput.Split(' ');
-            PasswordGenerator(arguments);
+            var userinput = Console.ReadLine();
+            if (userinput != null)
+            {
+                var arguments = userinput.Split(' ');
+                PasswordGenerator(arguments);
+            }
 
             static void PasswordGenerator(string[] args)
             {
-                if (!checkInput(args))
+                if (!CheckInput(args))
                 {
                     HelpText("clear");
                     Console.WriteLine("\nThere was an error with your input. Please try again...");
                     return;
                 }
-                string password = "";
-                string passwordSettings = args[1];
-                string passwordSettingsFilled = passwordSettings.PadRight(Convert.ToInt32(args[0]), 'l');
+                var password = "";
+                var passwordSettings = args[1];
+                var passwordSettingsFilled = passwordSettings.PadRight(Convert.ToInt32(args[0]), 'l');
                 while(passwordSettingsFilled.Length != 0)
                 {
-                    int randomIndex = random.Next(0, passwordSettingsFilled.Length - 1);
-                    char setting = passwordSettingsFilled.ToCharArray()[randomIndex];
+                    var randomIndex = Random.Next(0, passwordSettingsFilled.Length - 1);
+                    var setting = passwordSettingsFilled.ToCharArray()[randomIndex];
                     passwordSettingsFilled = passwordSettingsFilled.Remove(randomIndex, 1);
 
                     switch (setting)
                     {
                         case 'l':
-                            password += returnCharacter('l');
+                            password += ReturnCharacter('l');
                             break;
                         case 'L':
-                            password += returnCharacter('L');
+                            password += ReturnCharacter('L');
                             break;
                         case 'd':
-                            password += returnCharacter('d');
+                            password += ReturnCharacter('d');
                             break;
                         case 's':
-                            password += returnCharacter('s');
+                            password += ReturnCharacter('s');
                             break;
                         default:
                             Console.Clear();
@@ -225,52 +229,56 @@ namespace LearningCS
                 GoBack();
             }
 
-            static char returnCharacter(char character)
+            static char ReturnCharacter(char character)
             {
                 if (character == 'l')
                 {
-                    return (char)random.Next('a', 'z');
+                    return (char)Random.Next('a', 'z');
                 }
                 if (character == 'L')
                 {
-                    return (char)random.Next('A', 'Z');
+                    return (char)Random.Next('A', 'Z');
                 }
                 if (character == 'd')
                 {
                     //random number between 0 and 9, converted to string
                     //returns the character from index 0 of the string
-                    return random.Next(0, 9).ToString()[0];
+                    return Random.Next(0, 9).ToString()[0];
                 }
                 if (character == 's')
                 {
                     string specialCharacters = "!@£$\"#¤%&/(){;.,:-_'*¨^~´?`}[]";
-                    int randomIndex = random.Next(0, specialCharacters.Length - 1);
+                    int randomIndex = Random.Next(0, specialCharacters.Length - 1);
                     return specialCharacters[randomIndex];
                 }
                 else return '\0';
             }
 
-            static bool checkInput(string[] args)
+            static bool CheckInput(IReadOnlyList<string> args)
             {
-                if (args.Length == 0)
+                switch (args.Count)
                 {
-                    return false;
-                }
-                else if (args.Length == 2)
-                {
-                    string passwordLength = args[0];
-                    string passwordSettings = args[1];
-                    bool checkOne = checkLength(passwordLength);
-                    bool checkTwo = checkSettings(passwordSettings);
-                    if (!checkOne || !checkTwo)
-                    {
+                    case 0:
                         return false;
-                    }  
+                    case 2:
+                    {
+                        var passwordLength = args[0];
+                        var passwordSettings = args[1];
+                        var checkOne = CheckLength(passwordLength);
+                        var checkTwo = CheckSettings(passwordSettings);
+                        if (!checkOne || !checkTwo)
+                        {
+                            return false;
+                        }
+
+                        break;
+                    }
                 }
+
                 return true;
             }
 
-            static bool checkLength(string passwordLength)
+            static bool CheckLength(string passwordLength)
             {
                 foreach (char character in passwordLength)
                 {
@@ -282,7 +290,7 @@ namespace LearningCS
                 return true;
             }
 
-            static bool checkSettings(string passwordSettings)
+            static bool CheckSettings(string passwordSettings)
             {
                 foreach (char character in passwordSettings)
                 {

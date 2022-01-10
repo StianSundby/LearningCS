@@ -5,32 +5,32 @@ namespace LearningCS
 {
     public class Program : Declarations
     {
-        static string HelpText()
+        private static string HelpText()
         {
             string[] allCommands = {
                 "'View weeks' to go to the next menu.",
                 "'help' to view a list of all availble commands.",
                 "'Exit' to exit the application."
             };
-            string availableCommands = "";
-            foreach (string command in allCommands)
+            var availableCommands = "";
+            foreach (var command in allCommands)
             {
                 availableCommands += "     " + command + "\n";
             }
             Console.Clear();
-            string stringToReturn = "Available commands: \n" + availableCommands;
+            var stringToReturn = "Available commands: \n" + availableCommands;
             return stringToReturn;
         }
         public static void Main()
         {
             Options = new List<Option>
             {
-                new Option("View weeks", () => ChooseWeek()),
+                new Option("View weeks", ChooseWeek),
                 new Option("Help", () =>  Console.WriteLine(HelpText())),
                 new Option("Exit", () => Environment.Exit(0)),
             };
 
-            int index = 0;
+            var index = 0;
             WriteMenu(Options, Options[index]);
 
             ConsoleKeyInfo keyinfo;
@@ -64,21 +64,13 @@ namespace LearningCS
             Console.ReadKey(true);
 
         }
-        static void WriteMenu(List<Option> options, Option selectedOption)
+
+        private static void WriteMenu(List<Option> options, Option selectedOption)
         {
             Console.Clear();
-
-            foreach (Option option in options)
+            foreach (var option in options)
             {
-                if (option == selectedOption)
-                {
-                    Console.Write("> ");
-                }
-                else
-                {
-                    Console.Write(" ");
-                }
-
+                Console.Write(option == selectedOption ? @"> " : @" ");
                 Console.WriteLine(option.Name);
             }
         }
@@ -92,7 +84,7 @@ namespace LearningCS
                 new Option("Help", () =>  Console.WriteLine(HelpText())),
                 new Option("Exit", () => Environment.Exit(0)),
             };
-            int index = 0;
+            const int index = 0;
             WriteMenu(Options, Options[index]);
             Console.WriteLine("\nThe weeks will be added when needed.");
         }

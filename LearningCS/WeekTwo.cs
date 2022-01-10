@@ -26,23 +26,21 @@ namespace LearningCS
                 "There isn't alot to show here. But feel free to: \n\n" +
                 "Type in some letters and the code will count the amount of each one..."
                 );
-            int range = 255;
-            int[] ASCIITable = new int[range];
-            string text = "something";
+            const int range = 255;
+            var asciiTable = new int[range];
+            var text = "something";
             while (!string.IsNullOrWhiteSpace(text))
             {
                 text = Console.ReadLine();
                 foreach (var character in text ?? string.Empty)
                 {
-                    ASCIITable[(int)character]++;
+                    asciiTable[(int)character]++;
                 }
                 for (var i = 0; i < range; i++)
                 {
-                    if (ASCIITable[i] > 0)
-                    {
-                        var character = (char)i;
-                        Console.WriteLine(character + " - " + ASCIITable[i]);
-                    }
+                    if (asciiTable[i] <= 0) continue;
+                    var character = (char)i;
+                    Console.WriteLine(character + @" - " + asciiTable[i]);
                 }
             }
             ReturnToPreviousMenu();
