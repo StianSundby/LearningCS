@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using LearningCS.Properties;
 
 namespace LearningCS
 {
@@ -12,11 +14,7 @@ namespace LearningCS
                 "'help' to view a list of all availble commands.",
                 "'Exit' to exit the application."
             };
-            var availableCommands = "";
-            foreach (var command in allCommands)
-            {
-                availableCommands += "     " + command + "\n";
-            }
+            var availableCommands = allCommands.Aggregate("", (current, command) => current + ("     " + command + "\n"));
             Console.Clear();
             var stringToReturn = "Available commands: \n" + availableCommands;
             return stringToReturn;
@@ -25,9 +23,9 @@ namespace LearningCS
         {
             Options = new List<Option>
             {
-                new Option("View weeks", ChooseWeek),
-                new Option("Help", () =>  Console.WriteLine(HelpText())),
-                new Option("Exit", () => Environment.Exit(0)),
+                new("View weeks", ChooseWeek),
+                new("Help", () =>  Console.WriteLine(HelpText())),
+                new("Exit", () => Environment.Exit(0)),
             };
 
             var index = 0;
@@ -37,26 +35,32 @@ namespace LearningCS
             do
             {
                 keyinfo = Console.ReadKey(true);
-                if (keyinfo.Key == ConsoleKey.DownArrow)
+                switch (keyinfo.Key)
                 {
-                    if (index + 1 < Options.Count)
+                    case ConsoleKey.DownArrow:
                     {
-                        index++;
-                        WriteMenu(Options, Options[index]);
+                        if (index + 1 < Options.Count)
+                        {
+                            index++;
+                            WriteMenu(Options, Options[index]);
+                        }
+
+                        break;
                     }
-                }
-                if (keyinfo.Key == ConsoleKey.UpArrow)
-                {
-                    if (index - 1 >= 0)
+                    case ConsoleKey.UpArrow:
                     {
-                        index--;
-                        WriteMenu(Options, Options[index]);
+                        if (index - 1 >= 0)
+                        {
+                            index--;
+                            WriteMenu(Options, Options[index]);
+                        }
+
+                        break;
                     }
-                }
-                if (keyinfo.Key == ConsoleKey.Enter)
-                {
-                    Options[index].Selected.Invoke();
-                    index = 0;
+                    case ConsoleKey.Enter:
+                        Options[index].Selected.Invoke();
+                        index = 0;
+                        break;
                 }
             }
             while (keyinfo.Key != ConsoleKey.X);
@@ -79,45 +83,44 @@ namespace LearningCS
             Console.Clear();
             Options = new List<Option>
             {
-                new Option("Week 1", () => ChooseTask("WeekOne")),
-                new Option("Week 2", () => ChooseTask("WeekTwo")),
-                new Option("Help", () =>  Console.WriteLine(HelpText())),
-                new Option("Exit", () => Environment.Exit(0)),
+                new("Week 1", () => ChooseTask("WeekOne")),
+                new("Week 2", () => ChooseTask("WeekTwo")),
+                new("Help", () =>  Console.WriteLine(HelpText())),
+                new("Exit", () => Environment.Exit(0)),
             };
             const int index = 0;
             WriteMenu(Options, Options[index]);
-            Console.WriteLine("\nThe weeks will be added when needed.");
+            Console.WriteLine(Resources.Program_ChooseWeek_);
         }
         public static void ChooseTask(string weekNumber)
         {
             Console.Clear();
-            switch (weekNumber)
+            Options = weekNumber switch
             {
-                case "WeekOne":
-                    Options = new List<Option>
-                        {
-                            new Option("Task 1", () => WeekOne.Task1()),
-                            new Option("Task 2", () => WeekOne.Task2()),
-                            new Option("Task 3", () => WeekOne.Task3()),
-                            new Option("Task 4", () => WeekOne.Task4()),
-                            new Option("Task 5", () => WeekOne.Task5()),
-                            new Option("Task 6", () => WeekOne.Task6()),
-                            new Option("Help", () =>  Console.WriteLine(HelpText())),
-                            new Option("Back", () => ChooseWeek()),
-                            new Option("Exit", () => Environment.Exit(0)),
-                        };
-                    break;
-                case "WeekTwo":
-                    Options = new List<Option>
-                        {
-                            new Option("Task 1", () => WeekTwo.Task1()),
-                            new Option("Help", () =>  Console.WriteLine(HelpText())),
-                            new Option("Back", () => ChooseWeek()),
-                            new Option("Exit", () => Environment.Exit(0)),
-                        };
-                    break;
-            }
-            int index = 0;
+                "WeekOne" => new List<Option>
+                {
+                    new("Task 1", WeekOne.Task1),
+                    new("Task 2", WeekOne.Task2),
+                    new("Task 3", WeekOne.Task3),
+                    new("Task 4", WeekOne.Task4),
+                    new("Task 5", WeekOne.Task5),
+                    new("Task 6", WeekOne.Task6),
+                    new("Help", () => Console.WriteLine(HelpText())),
+                    new("Back", ChooseWeek),
+                    new("Exit", () => Environment.Exit(0)),
+                },
+                "WeekTwo" => new List<Option>
+                {
+                    new("Task 1", WeekTwo.Task1),
+                    new("Task 2", WeekTwo.Task2),
+                    new("Task 3", WeekTwo.Task3),
+                    new("Help", () => Console.WriteLine(HelpText())),
+                    new("Back", ChooseWeek),
+                    new("Exit", () => Environment.Exit(0)),
+                },
+                _ => Options
+            };
+            const int index = 0;
             WriteMenu(Options, Options[index]);
         }
     }
