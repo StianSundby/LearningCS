@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using LearningCS.Properties;
 
 namespace LearningCS
 {
@@ -8,7 +10,7 @@ namespace LearningCS
         private static readonly Random Random = new();
         private static void ReturnToPreviousMenu()
         {
-            Console.WriteLine("\nThat's it. Press any key to return");
+            Console.WriteLine(@"\nThat's it. Press any key to return");
             Console.ReadKey(true);
             GoBack();
         }
@@ -33,19 +35,18 @@ namespace LearningCS
         {
             Console.Clear();
             Console.WriteLine(
-                "Assignment 2 - String Interpolation.\n" +
-                "There was also an assignment about debugging arguments, but I can't showcase that here.\n"
+                Resources.WeekOne_Task2_
             );
 
-            int a = 5;
-            int b = 30;
-            int sum = a + b;
+            var a = 5;
+            var b = 30;
+            var sum = a + b;
 
             Console.WriteLine(
                 "Without string interpolation it took three lines to write this: \n" +
-                "Input variable 'a': " + a + ". \n" +
-                "Input bariable 'b': " + b + ". \n" +
-                "The sum of these are: " + sum + ".\n"
+                "Input variable 'a': " + a + @". \n" +
+                "Input bariable 'b': " + b + @". \n" +
+                "The sum of these are: " + sum + @".\n"
             );
             Console.WriteLine(
                 "With string interpolation it was written in one line: \n" +
@@ -94,14 +95,12 @@ namespace LearningCS
                 }
                 for (var i = 0; i < range; i++)
                 {
-                    if (asciiCode[i] > 0)
-                    {
-                        var character = (char)i;
-                        var totalPercentage = 100 * asciiCode[i] / total;
-                        var output = $"{character} - {asciiCode[i]}. Or: {totalPercentage}%";
-                        Console.CursorLeft = Console.BufferWidth - output.Length - 1;
-                        Console.WriteLine(output);
-                    }
+                    if (asciiCode[i] <= 0) continue;
+                    var character = (char)i;
+                    var totalPercentage = 100 * asciiCode[i] / total;
+                    var output = $"{character} - {asciiCode[i]}. Or: {totalPercentage}%";
+                    Console.CursorLeft = Console.BufferWidth - output.Length - 1;
+                    Console.WriteLine(output);
                 }
             }
 
@@ -119,8 +118,8 @@ namespace LearningCS
                 "The second method should write out that it doesnt return anything to the console.\n"
             );
 
-            int numberOne = 10;
-            int numberTwo = 20;
+            var numberOne = 10;
+            var numberTwo = 20;
             Console.WriteLine(
                 "This is the first method:\n" +
                 $"The sum of {numberOne} and {numberTwo} is {MethodOne(numberOne, numberTwo)}\n"
@@ -231,27 +230,25 @@ namespace LearningCS
 
             static char ReturnCharacter(char character)
             {
-                if (character == 'l')
+                switch (character)
                 {
-                    return (char)Random.Next('a', 'z');
+                    case 'l':
+                        return (char)Random.Next('a', 'z');
+                    case 'L':
+                        return (char)Random.Next('A', 'Z');
+                    case 'd':
+                        //random number between 0 and 9, converted to string
+                        //returns the character from index 0 of the string
+                        return Random.Next(0, 9).ToString()[0];
+                    case 's':
+                    {
+                        var specialCharacters = "!@£$\"#¤%&/(){;.,:-_'*¨^~´?`}[]";
+                        var randomIndex = Random.Next(0, specialCharacters.Length - 1);
+                        return specialCharacters[randomIndex];
+                    }
+                    default:
+                        return '\0';
                 }
-                if (character == 'L')
-                {
-                    return (char)Random.Next('A', 'Z');
-                }
-                if (character == 'd')
-                {
-                    //random number between 0 and 9, converted to string
-                    //returns the character from index 0 of the string
-                    return Random.Next(0, 9).ToString()[0];
-                }
-                if (character == 's')
-                {
-                    string specialCharacters = "!@£$\"#¤%&/(){;.,:-_'*¨^~´?`}[]";
-                    int randomIndex = Random.Next(0, specialCharacters.Length - 1);
-                    return specialCharacters[randomIndex];
-                }
-                else return '\0';
             }
 
             static bool CheckInput(IReadOnlyList<string> args)
@@ -280,27 +277,13 @@ namespace LearningCS
 
             static bool CheckLength(string passwordLength)
             {
-                foreach (char character in passwordLength)
-                {
-                    if (!char.IsDigit(character))
-                    {
-                        return false;
-                    }
-                }
-                return true;
+                return passwordLength.All(char.IsDigit);
             }
 
             static bool CheckSettings(string passwordSettings)
             {
-                foreach (char character in passwordSettings)
-                {
-                    string validCharacters = "lLds";
-                    if (!validCharacters.Contains(character))
-                    {
-                        return false;
-                    }
-                }
-                return true;
+                return !(from character in passwordSettings let validCharacters = "lLds" 
+                    where !validCharacters.Contains(character) select character).Any();
             }
         }
     }
