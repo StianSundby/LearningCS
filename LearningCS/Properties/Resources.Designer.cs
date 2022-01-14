@@ -59,5 +59,77 @@ namespace LearningCS.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The weeks will be added when needed..
+        /// </summary>
+        internal static string Program_ChooseWeek_ {
+            get {
+                return ResourceManager.GetString("Program_ChooseWeek_", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to That&apos;s it. Press any key to return.
+        /// </summary>
+        internal static string WeekOne_ReturnToPreviousMenu_ {
+            get {
+                return ResourceManager.GetString("WeekOne_ReturnToPreviousMenu_", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Assignment 2 - String Interpolation.There was also an assignment about debugging arguments, but I can&apos;t showcase that here.
+        ///.
+        /// </summary>
+        internal static string WeekOne_Task2_ {
+            get {
+                return ResourceManager.GetString("WeekOne_Task2_", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to That&apos;s it. Press any key to return.
+        /// </summary>
+        internal static string WeekTwo_ReturnToPreviousMenu_ {
+            get {
+                return ResourceManager.GetString("WeekTwo_ReturnToPreviousMenu_", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Assignment 7 - Debugging.
+        ///			The code provided for this assignment is the same as in WeekOne, Task 4.
+        ///			It was about teaching us debugging in Visual Studio. 
+        ///			Breakpoints, step-into, step-over and step-out. 
+        ///			There isn&apos;t alot to show here. But feel free to: 
+        ///
+        ///			Type in some letters and the code will count the amount of each one....
+        /// </summary>
+        internal static string WeekTwo_Task1_ {
+            get {
+                return ResourceManager.GetString("WeekTwo_Task1_", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Press any key to get the next shape...
+        ///.
+        /// </summary>
+        internal static string WeekTwo_Task2_Next {
+            get {
+                return ResourceManager.GetString("WeekTwo_Task2_Next", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 
+        ///Press any key to view the next puzzle....
+        /// </summary>
+        internal static string WeekTwo_Task3_Next {
+            get {
+                return ResourceManager.GetString("WeekTwo_Task3_Next", resourceCulture);
+            }
+        }
     }
 }
