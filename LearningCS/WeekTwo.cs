@@ -7,6 +7,7 @@ namespace LearningCS
 {
     internal class WeekTwo
     {
+        private static readonly Random Random = new();
         private static void ReturnToPreviousMenu()
         {
             Console.WriteLine("\nThat's it. Press any key to return...");
@@ -188,30 +189,20 @@ namespace LearningCS
                 return padLeft;
             }
 
-            string VowelCount(string stringToCheck)
+            string VowelCount(string inputString)
             {
-                var count = 0;
                 char[] vowelChars = { 'a', 'e', 'i', 'o', 'u', 'y' };
-                var substring = stringToCheck.Split(' ');
-                foreach (var word in substring)
-                {
-                    foreach (var character in word)
-                    {
-                        if (vowelChars.Contains(character))
-                        {
-                            count++;
-                        }
-                    }
-                }
+                var substring = inputString.Split(' ');
+                var count = substring.SelectMany(word => word).Count(character => vowelChars.Contains(character));
 
                 return Convert.ToString(count);
             }
 
-            string LongestWord(string? stringToCheck)
+            string LongestWord(string inputString)
             {
-                if (stringToCheck == null) return string.Empty;
+                if (inputString == null) return string.Empty;
 
-                var substring = stringToCheck.Split(' ');
+                var substring = inputString.Split(' ');
                 var wordlength = 0;
                 foreach (var word in substring)
                 {
@@ -224,10 +215,10 @@ namespace LearningCS
                 return Convert.ToString(wordlength);
             }
 
-            int CountWords(string? stringToCheck)
+            int CountWords(string inputString)
             {
-                if (stringToCheck == null) return 0;
-                var substring = stringToCheck.Split(' ');
+                if (inputString == null) return 0;
+                var substring = inputString.Split(' ');
                 var count = Convert.ToInt32(substring.Length);
                 return count;
 
@@ -246,6 +237,10 @@ namespace LearningCS
             Console.ReadKey(true);
             ProblemOne();
             ProblemTwo();
+            //ProblemThree() called from inside ProblemTwo()
+            ProblemFour();
+            //ProblemFive();
+            ReturnToPreviousMenu();
             static void ProblemOne()
             {
                 Console.Clear();
@@ -364,6 +359,84 @@ namespace LearningCS
                 }
                 Console.WriteLine(result);
             }
+
+            static void ProblemFour()
+            {
+                Console.Clear();
+                Console.WriteLine(
+                    "The problem:\n" +
+                    "To make the ciphertext problem even more challenging, have your program randomly\n" +
+                    "generate the cipher array instead of a hard - coded const array.\n" +
+                    "Effectively, this means placing a random character in each element of the\n" +
+                    "array, but remember that you can’t substitute a letter for itself.So the first\n" +
+                    "element can’t be A, and you can’t use the same letter for two substitutions—\n" +
+                    "that is, if the first element is S, no other element can be S.\n"
+                );
+
+                Console.WriteLine("Press any key to view the ciphercode...");
+                Console.ReadKey(true);
+                const string alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZÆØÅ";
+                var cipherCode = ConvertToCipher(alphabet);
+                Console.WriteLine(cipherCode);
+                Console.WriteLine("\nPress any key to view the next problem...");
+                Console.ReadKey(true);
+
+                static string ConvertToCipher(string alphabet)
+                {
+                    var cipherCode = alphabet.ToCharArray();
+                    for (var i = 0; i < alphabet.Length; i++)
+                    {
+                        int randomIndex2;
+                        int avoidIndex2;
+                        do
+                        {
+                            var randomChar1 = cipherCode[i];
+                            var avoidChar1 = alphabet.IndexOf(randomChar1);
+                            randomIndex2 = Random.Next(0, alphabet.Length - 1);
+
+                            if (randomIndex2 >= avoidChar1) randomIndex2++;
+                            var randomChar2 = cipherCode[randomIndex2];
+                            avoidIndex2 = alphabet.IndexOf(randomChar2);
+                        } while (avoidIndex2 == i);
+
+                        (cipherCode[i], cipherCode[randomIndex2]) = (cipherCode[randomIndex2], cipherCode[i]);
+                    }
+
+                    return new string(cipherCode);
+                }
+
+
+            }
+
+            //static void ProblemFive()
+            //{
+            //    Console.Clear();
+            //    Console.WriteLine(
+            //        "The problem:\n" +
+            //        "Write a program that is given an array of integers and determines the mode,\n" +
+            //        "which is the number that appears most frequently in the array."
+            //    );
+            //    Console.WriteLine("\nType in any combination of numbers to find the mode\n");
+            //    var userInput = Console.ReadLine();
+            //    var n = int.Parse(Console.ReadLine());
+            //    var arr = new int[n];
+            //    var s = Console.ReadLine().Split(' ');
+            //    for (var i = 0; i < n; i++)
+            //    {
+            //        arr[i] = int.Parse(s[i]);
+            //    }
+            //    var query = arr.GroupBy(i => i).Select(group => new {Value = group.Key, Count = group.Count()});
+            //    foreach (var item in query)
+            //    {
+            //        Console.WriteLine("Value: {0}, Count: {1}", item.Value, item.Count);
+            //    }
+
+            //    Console.WriteLine("Press any key to go back to the selection menu...");
+            //    Console.ReadKey();
+            //    {
+                    
+            //    }
+            //}
         }
     }
 }
