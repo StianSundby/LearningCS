@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Diagnostics;
 using System.Linq;
 using LearningCS.Properties;
 
@@ -239,7 +241,7 @@ namespace LearningCS
             ProblemTwo();
             //ProblemThree() called from inside ProblemTwo()
             ProblemFour();
-            //ProblemFive();
+            ProblemFive();
             ReturnToPreviousMenu();
             static void ProblemOne()
             {
@@ -408,35 +410,49 @@ namespace LearningCS
 
             }
 
-            //static void ProblemFive()
-            //{
-            //    Console.Clear();
-            //    Console.WriteLine(
-            //        "The problem:\n" +
-            //        "Write a program that is given an array of integers and determines the mode,\n" +
-            //        "which is the number that appears most frequently in the array."
-            //    );
-            //    Console.WriteLine("\nType in any combination of numbers to find the mode\n");
-            //    var userInput = Console.ReadLine();
-            //    var n = int.Parse(Console.ReadLine());
-            //    var arr = new int[n];
-            //    var s = Console.ReadLine().Split(' ');
-            //    for (var i = 0; i < n; i++)
-            //    {
-            //        arr[i] = int.Parse(s[i]);
-            //    }
-            //    var query = arr.GroupBy(i => i).Select(group => new {Value = group.Key, Count = group.Count()});
-            //    foreach (var item in query)
-            //    {
-            //        Console.WriteLine("Value: {0}, Count: {1}", item.Value, item.Count);
-            //    }
+            static void ProblemFive()
+            {
+                Console.Clear();
+                Console.WriteLine(
+                    "The problem:\n" +
+                    "Write a program that is given an array of integers and determines the mode,\n" +
+                    "which is the number that appears most frequently in the array.\n"
+                );
+                var intArray = new[] { 8, 7, 3, 9, 2, 1, 7, 5, 4, 5, 4, 7, 3, 2, 1, 7, 3, 7, 8};
+                Array.Sort(intArray);
+                int maxCount = 1, res = intArray[0];
+                var currentCount = 1;
+                for (var i = 1; i < intArray.Length; i++)
+                {
+                    if (intArray[i] == intArray[i - 1]) currentCount++;
+                    else
+                    {
+                        if (currentCount > maxCount)
+                        {
+                            maxCount = currentCount;
+                            res = intArray[i - 1];
+                        }
 
-            //    Console.WriteLine("Press any key to go back to the selection menu...");
-            //    Console.ReadKey();
-            //    {
-                    
-            //    }
-            //}
+                        currentCount = 1;
+                    }
+                }
+
+                if (currentCount > maxCount)
+                {
+                    maxCount = currentCount;
+                    res = intArray[^1];
+                }
+
+                var occurrences = intArray.Count(x => x == res);
+                Console.WriteLine("The array we're checking looks like this:\n");
+                foreach (var item in intArray)
+                {
+                    Console.Write(item.ToString());
+                }
+                Console.WriteLine("\nPress any key to get the mode\n");
+                Console.ReadKey(true);
+                Console.WriteLine("\nThe mode is: " + res + ".\nIt appears " + occurrences + " times in the array\n\n");
+            }
         }
     }
 }
