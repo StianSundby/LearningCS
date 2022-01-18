@@ -85,6 +85,7 @@ namespace LearningCS
             {
                 new("Week 1", () => ChooseTask("WeekOne")),
                 new("Week 2", () => ChooseTask("WeekTwo")),
+                new("Week 3", () => ChooseTask("WeekThree")),
                 new("Help", () =>  Console.WriteLine(HelpText())),
                 new("Exit", () => Environment.Exit(0)),
             };
@@ -117,6 +118,10 @@ namespace LearningCS
                     new("Help", () => Console.WriteLine(HelpText())),
                     new("Back", ChooseWeek),
                     new("Exit", () => Environment.Exit(0)),
+                },
+                "WeekThree" => new List<Option>
+                {
+                    new("Task 1", WeekThree.Task1),
                 },
                 _ => Options
             };
