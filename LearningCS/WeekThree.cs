@@ -26,8 +26,8 @@ namespace LearningCS
         {
             Console.Clear();
             Console.WriteLine("Task 1:\n" +
-                              "We were tasked with making a program that reads and handles data from a text file.\n"+
-                              "And with this data we were to make a word-riddle generator. All of the riddles are in"+
+                              "We were tasked with making a program that reads and handles data from a text file.\n" +
+                              "And with this data we were to make a word-riddle generator. All of the riddles are in" +
                               "Norwegian.");
             var words = ImportWords();
             var count = 200;
@@ -36,6 +36,7 @@ namespace LearningCS
                 var findPair = FindPair(words);
                 if (findPair) count--;
             }
+
             ReturnToPreviousMenu();
 
             static string[] ImportWords()
@@ -87,5 +88,43 @@ namespace LearningCS
                 return currentWordLastPart == wordFirstPart;
             }
         }
+
+        public static void Task2()
+        {
+            Console.Clear();
+            Console.WriteLine("Task 2:\n" +
+                              "We were tasked with making a program that utilizes classes and constructors.\n" +
+                              "The class was to have an object variable 'Name' that was to be called from the" +
+                              "Class and printed to the console. We were also to print out a line 10 times.\n" +
+                              "Press any key to continue...\n");
+
+            Console.ReadKey(true);
+            var textPrinter = new TextPrinter("Stian", 10);
+            ReturnToPreviousMenu();
+        }
+
+        private class TextPrinter
+        {
+            internal TextPrinter(string name, int amount)
+            {
+                PrintName(name, amount);
+            }
+
+
+            private static void PrintName(string name, int amount)
+            {
+                Console.WriteLine(name);
+                PrintText(amount);
+            }
+
+            private static void PrintText(int amount)
+            {
+                for (var i = 1; i < amount + 1; i++)
+                {
+                    Console.WriteLine("Runde nr: " + i);
+                }
+            }
+        }
     }
 }
+
