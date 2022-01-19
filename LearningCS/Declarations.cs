@@ -4,9 +4,6 @@ namespace LearningCS
 {
     public class Declarations
     {
-        private static List<Option> options;
-
-        public static List<Option> Options { get => options; set => options = value; }
-
+        public static List<Option> Options { get; set; }
     }
 }
