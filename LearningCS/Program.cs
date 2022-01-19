@@ -61,12 +61,13 @@ namespace LearningCS
                         Options[index].Selected.Invoke();
                         index = 0;
                         break;
+                    case ConsoleKey.Escape:
+                        Environment.Exit(0);
+                        break;
                 }
             }
             while (keyinfo.Key != ConsoleKey.X);
-
             Console.ReadKey(true);
-
         }
 
         private static void WriteMenu(List<Option> options, Option selectedOption)
@@ -122,6 +123,10 @@ namespace LearningCS
                 "WeekThree" => new List<Option>
                 {
                     new("Task 1", WeekThree.Task1),
+                    new("Task 2", WeekThree.Task2),
+                    new("Help", () => Console.WriteLine(HelpText())),
+                    new("Back", ChooseWeek),
+                    new("Exit", () => Environment.Exit(0)),
                 },
                 _ => Options
             };
