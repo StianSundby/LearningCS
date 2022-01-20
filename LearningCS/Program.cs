@@ -124,7 +124,6 @@ namespace LearningCS
                 {
                     new("Task 1", WeekThree.Task1),
                     new("Task 2", WeekThree.Task2),
-                    new("Task 3", WeekThree.Task3),
                     new("Help", () => Console.WriteLine(HelpText())),
                     new("Back", ChooseWeek),
                     new("Exit", () => Environment.Exit(0)),
