@@ -107,8 +107,8 @@ namespace LearningCS
                 Properties.Resources.WeekOne_Task5_Intro
             );
 
-            var numberOne = 10;
-            var numberTwo = 20;
+            const int numberOne = 10;
+            const int numberTwo = 20;
             Console.WriteLine(
                 "This is the first method:\n" +
                 $"The sum of {numberOne} and {numberTwo} is {MethodOne(numberOne, numberTwo)}\n"
@@ -125,7 +125,7 @@ namespace LearningCS
             }
             static string MethodTwo()
             {
-                var response = "This method doesn't return anything";
+                const string response = "This method doesn't return anything";
                 return response;
             }
 
@@ -158,7 +158,7 @@ namespace LearningCS
                 PasswordGenerator(arguments);
             }
 
-            static void PasswordGenerator(string[] args)
+            static void PasswordGenerator(IReadOnlyList<string> args)
             {
                 if (!CheckInput(args))
                 {
