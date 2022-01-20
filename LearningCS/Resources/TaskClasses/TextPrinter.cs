@@ -20,7 +20,7 @@ namespace LearningCS.Resources.TaskClasses
             PrintName(Amount);
         }
 
-        public void PrintName(int amount)
+        public static void PrintName(int amount)
         {
             for (var i = 1; i < amount + 1; i++)
             {
