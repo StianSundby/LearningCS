@@ -26,10 +26,7 @@ namespace LearningCS
         public static void Task1()
         {
             Console.Clear();
-            Console.WriteLine("Task 1:\n" +
-                              "We were tasked with making a program that reads and handles data from a text file.\n" +
-                              "And with this data we were to make a word-riddle generator. All of the riddles are in" +
-                              "Norwegian.");
+            Console.WriteLine(Properties.Resources.WeekThree_Task1_Intro);
             var words = ImportWords();
             var count = 200;
             while (count > 0)
@@ -93,11 +90,7 @@ namespace LearningCS
         public static void Task2()
         {
             Console.Clear();
-            Console.WriteLine("Task 2:\n" +
-                              "We were tasked with making a program that utilizes classes and constructors.\n" +
-                              "The class was to have an object variable 'Name' that was to be called from the" +
-                              "Class and printed to the console. We were also to print out a line 10 times.\n" +
-                              "Press any key to continue...\n");
+            Console.WriteLine(Properties.Resources.WeekThree_Task2_Intro);
 
             Console.ReadKey(true);
             var textPrinter = new TextPrinter("Stian", 10);

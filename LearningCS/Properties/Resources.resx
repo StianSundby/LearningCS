@@ -187,4 +187,16 @@ Example: 14 lLssdd
 
 Enter your password parameters. If you can't think of any, just enter the ones in the example...</value>
 	</data>
+	<data name="WeekThree_Task1_Intro" xml:space="preserve">
+		<value>Task 1:
+We were tasked with making a program that reads and handles data from a text file.
+And with this data we were to make a word-riddle generator. All of the riddles are inNorwegian.</value>
+	</data>
+	<data name="WeekThree_Task2_Intro" xml:space="preserve">
+		<value>Task 2:
+We were tasked with making a program that utilizes classes and constructors.
+The class was to have an object variable 'Name' that was to be called from theClass and printed to the console. We were also to print out a line 10 times.
+Press any key to continue...
+</value>
+	</data>
 </root>

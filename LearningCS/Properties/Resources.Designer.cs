@@ -165,6 +165,30 @@ namespace LearningCS.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Task 1:
+        ///We were tasked with making a program that reads and handles data from a text file.
+        ///And with this data we were to make a word-riddle generator. All of the riddles are inNorwegian..
+        /// </summary>
+        internal static string WeekThree_Task1_Intro {
+            get {
+                return ResourceManager.GetString("WeekThree_Task1_Intro", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Task 2:
+        ///We were tasked with making a program that utilizes classes and constructors.
+        ///The class was to have an object variable &apos;Name&apos; that was to be called from theClass and printed to the console. We were also to print out a line 10 times.
+        ///Press any key to continue...
+        ///.
+        /// </summary>
+        internal static string WeekThree_Task2_Intro {
+            get {
+                return ResourceManager.GetString("WeekThree_Task2_Intro", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to That&apos;s it. Press any key to return.
         /// </summary>
         internal static string WeekTwo_ReturnToPreviousMenu_ {
