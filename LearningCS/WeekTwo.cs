@@ -22,7 +22,13 @@ namespace LearningCS
         public static void Task1()
         {
             Console.Clear();
-            Console.WriteLine(Resources.WeekTwo_Task1_);
+            Console.WriteLine("Task 1:\n"+
+                              "We were first tasked with copy pasting some code and figuring out what it does.\n"+
+                              "After that we were to add functionality to it, which are the following:\n"+
+                              "     Change it so that it handles both lowercase and capital letters.\n"+
+                              "     Show the count in %, not just a whole number\n"+
+                              "     Adjust the text so it prints to the right side of the console.");
+            Console.WriteLine("Type in some text and have the program count each character...");
             const int range = 255;
             var asciiTable = new int[range];
             var text = "something";
@@ -60,15 +66,15 @@ namespace LearningCS
             Console.ReadKey(true);
 
             ShapeOne(); //puzzle one
-            Console.WriteLine(Resources.WeekTwo_Task2_Next);
+            Console.WriteLine("Press any key to view the next puzzle...");
             Console.ReadKey(true);
 
             ShapeTwo(); //puzzle two
-            Console.WriteLine(Resources.WeekTwo_Task2_Next);
+            Console.WriteLine("Press any key to view the next puzzle...");
             Console.ReadKey(true);
 
             ShapeThree(); //puzzle three
-            Console.WriteLine(Resources.WeekTwo_Task2_Next);
+            Console.WriteLine("Press any key to view the next puzzle...");
             Console.ReadKey(true);
 
             Console.WriteLine("\n\n Enter some text...\n"); //puzzle four

@@ -2,7 +2,7 @@
 using System.IO;
 using System.Collections.Generic;
 using System.Text;
-using LearningCS.TaskClasses;
+using LearningCS.Resources.TaskClasses;
 
 namespace LearningCS
 {

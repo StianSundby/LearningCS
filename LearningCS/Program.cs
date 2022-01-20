@@ -92,7 +92,6 @@ namespace LearningCS
             };
             const int index = 0;
             WriteMenu(Options, Options[index]);
-            Console.WriteLine(Resources.Program_ChooseWeek_);
         }
         public static void ChooseTask(string weekNumber)
         {

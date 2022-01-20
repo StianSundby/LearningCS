@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using LearningCS.Properties;
 
 namespace LearningCS
 {
@@ -22,7 +21,8 @@ namespace LearningCS
         public static void Task1()
         {
             Console.Clear();
-            Console.WriteLine("Assignment 1 - Writing to console.\n");
+            Console.WriteLine("Task 1:\n"+
+                              "Writing to console.\n");
 
             Console.WriteLine("Hello, what's your name?");
             var linje1 = Console.ReadLine();
@@ -35,12 +35,13 @@ namespace LearningCS
         {
             Console.Clear();
             Console.WriteLine(
-                Resources.WeekOne_Task2_
+                "Task 2:\n"+
+                "Input variables and string interpolation."
             );
 
-            var a = 5;
-            var b = 30;
-            var sum = a + b;
+            const int a = 5;
+            const int b = 30;
+            const int sum = a + b;
 
             Console.WriteLine(
                 "Without string interpolation it took three lines to write this: \n" +
