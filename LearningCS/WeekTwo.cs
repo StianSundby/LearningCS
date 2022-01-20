@@ -66,16 +66,11 @@ namespace LearningCS
             Console.ReadKey(true);
 
             ShapeOne(); //puzzle one
-            Console.WriteLine("Press any key to view the next puzzle...");
-            Console.ReadKey(true);
-
+            NextPuzzle();
             ShapeTwo(); //puzzle two
-            Console.WriteLine("Press any key to view the next puzzle...");
-            Console.ReadKey(true);
-
+            NextPuzzle();
             ShapeThree(); //puzzle three
-            Console.WriteLine("Press any key to view the next puzzle...");
-            Console.ReadKey(true);
+            NextPuzzle();
 
             Console.WriteLine("\n\n Enter some text...\n"); //puzzle four
             var userinput = Console.ReadLine();
@@ -229,8 +224,14 @@ namespace LearningCS
                 return count;
 
             }
+
+            void NextPuzzle()
+            {
+                Console.WriteLine(Properties.Resources.WeekTwo_Task2_NextPuzzle);
+                Console.ReadKey(true);
+            }
         }
-        
+
         public static void Task3()
         {
             Console.Clear();

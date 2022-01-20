@@ -69,4 +69,7 @@
 		<value>
 Press any key to view the next puzzle...</value>
 	</data>
+	<data name="WeekTwo_Task2_NextPuzzle" xml:space="preserve">
+		<value>Press any key to view the next puzzle...</value>
+	</data>
 </root>

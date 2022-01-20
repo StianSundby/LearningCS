@@ -123,6 +123,15 @@ namespace LearningCS.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Press any key to view the next puzzle....
+        /// </summary>
+        internal static string WeekTwo_Task2_NextPuzzle {
+            get {
+                return ResourceManager.GetString("WeekTwo_Task2_NextPuzzle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 
         ///Press any key to view the next puzzle....
         /// </summary>
