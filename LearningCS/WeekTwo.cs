@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Intrinsics.Arm;
+using System.Transactions;
 
 namespace LearningCS
 {
@@ -73,11 +75,20 @@ namespace LearningCS
 
             Console.WriteLine("\n\n Enter some text...\n"); //puzzle four
             var userinput = Console.ReadLine();
-            var stringToCheck = userinput.ToLower();
-            Console.WriteLine("\nThe text you entered can be broken down like this:");
-            Console.WriteLine("Words: " + CountWords(stringToCheck));
-            Console.WriteLine("Longest word: " + LongestWord(stringToCheck));
-            Console.WriteLine("Amount of vowels used: " + VowelCount(stringToCheck) + "\n");
+            if (userinput != null)
+            {
+                var stringToCheck = userinput.ToLower();
+                Console.WriteLine("\nThe text you entered can be broken down like this:");
+                Console.WriteLine("Words: " + CountWords(stringToCheck));
+                Console.WriteLine("Longest word: " + LongestWord(stringToCheck));
+                Console.WriteLine("Amount of vowels used: " + VowelCount(stringToCheck) + "\n");
+            }
+            else
+            {
+                Console.WriteLine("\n\n Error: Didnt see any text entered. Returning to the menu...\n");
+                Console.ReadKey(true);
+                ReturnToPreviousMenu();
+            }
 
             ReturnToPreviousMenu();
 
