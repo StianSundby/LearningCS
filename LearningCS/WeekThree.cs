@@ -2,6 +2,7 @@
 using System.IO;
 using System.Collections.Generic;
 using System.Text;
+using LearningCS.TaskClasses;
 
 namespace LearningCS
 {
@@ -100,31 +101,24 @@ namespace LearningCS
 
             Console.ReadKey(true);
             var textPrinter = new TextPrinter("Stian", 10);
+            textPrinter.PrintName();
             ReturnToPreviousMenu();
         }
 
-        private class TextPrinter
+
+        public static void Task3()
         {
-            internal TextPrinter(string name, int amount)
-            {
-                PrintName(name, amount);
-            }
-
-
-            private static void PrintName(string name, int amount)
-            {
-                Console.WriteLine(name);
-                PrintText(amount);
-            }
-
-            private static void PrintText(int amount)
-            {
-                for (var i = 1; i < amount + 1; i++)
-                {
-                    Console.WriteLine("Runde nr: " + i);
-                }
-            }
+            Console.Clear();
+            Console.WriteLine("Task 3:\n" +
+                              "This task is similar to the last one, but we were to overload methods in the class.\n" +
+                              "Our default method was to print 'Hello and welcome'\n"+
+                              "And we were to overload that method with a string parameter. So it would print\n" +
+                              "'Hello and welcome, [name]' instead.\n"+
+                              "Press any key to continue...\n");
+            Console.ReadKey(true);
+            var welcomeMessage = new WelcomeMessage("Hello and welcome");
+            welcomeMessage.PrintWelcomeMessage("Terje");
+            ReturnToPreviousMenu();
         }
     }
 }
-
