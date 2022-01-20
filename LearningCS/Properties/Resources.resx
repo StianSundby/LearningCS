@@ -141,4 +141,50 @@ Write a program that is given an array of integers and determines the mode,
 which is the number that appears most frequently in the array.
 </value>
 	</data>
+	<data name="WeekOne_Task3_Intro" xml:space="preserve">
+		<value>Assignment 3 - Loops.
+This assignment was all about understanding the different types of loops, which include: 
+While, Do-While, Foreach and For
+
+There isn't anything to show here, the code just printed out a word 10 times.
+Which was done four diffrent times with four different types of loops.
+</value>
+	</data>
+	<data name="WeekOne_Task4_Intro" xml:space="preserve">
+		<value>Assignment 4 - Letter counter.
+Counts the number of each letter entered.
+It left-aligns the text.
+Also shows how much of the total percentage each letter used. If that makes any sense...
+</value>
+	</data>
+	<data name="WeekOne_Task5_Intro" xml:space="preserve">
+		<value>Assignment 5 - Return value.
+This assignment consists of two tasks, where I had to write two methods.
+The first method should return the sum of two numbers.
+The second method should write out that it doesnt return anything to the console.
+</value>
+	</data>
+	<data name="WeekOne_Task6_Intro" xml:space="preserve">
+		<value>Assignment 6 - Password generator.
+This assignment was about making random password generator based on userinput.
+
+
+</value>
+	</data>
+	<data name="WeekOne_Task6_PasswordRequirements" xml:space="preserve">
+		<value>PasswordGenerator 
+  Options:
+  - l = lower case letter
+  - L = upper case letter
+  - d = digit
+  - s = special character (!#¤%&amp;/(){}[]
+
+Example: 14 lLssdd
+  - Min. 1 lower case
+  - Min. 1 upper case
+  - Min. 2 special characters
+  - Min. 2 digits
+
+Enter your password parameters. If you can't think of any, just enter the ones in the example...</value>
+	</data>
 </root>

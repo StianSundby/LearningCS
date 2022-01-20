@@ -61,13 +61,7 @@ namespace LearningCS
         {
             Console.Clear();
             Console.WriteLine(
-                "Assignment 3 - Loops.\n" +
-                "This assignment was all about understanding the different types of loops, which include: \n" +
-                "While, Do-While, Foreach and For\n"
-            );
-            Console.WriteLine(
-                "There isn't anything to show here, the code just printed out a word 10 times.\n" +
-                "Which was done four diffrent times with four different types of loops.\n"
+                Properties.Resources.WeekOne_Task3_Intro
             );
             ReturnToPreviousMenu();
         }
@@ -76,10 +70,7 @@ namespace LearningCS
         {
             Console.Clear();
             Console.WriteLine(
-                "Assignment 4 - Letter counter.\n" +
-                "Counts the number of each letter entered.\n" +
-                "It left-aligns the text.\n" +
-                "Also shows how much of the total percentage each letter used. If that makes any sense...\n"
+                Properties.Resources.WeekOne_Task4_Intro
             );
 
             const int range = 255;
@@ -113,10 +104,7 @@ namespace LearningCS
         {
             Console.Clear();
             Console.WriteLine(
-                "Assignment 5 - Return value.\n" +
-                "This assignment consists of two tasks, where I had to write two methods.\n" +
-                "The first method should return the sum of two numbers.\n" +
-                "The second method should write out that it doesnt return anything to the console.\n"
+                Properties.Resources.WeekOne_Task5_Intro
             );
 
             var numberOne = 10;
@@ -153,25 +141,13 @@ namespace LearningCS
                     Console.Clear();
                 }
                 Console.WriteLine(
-                    "PasswordGenerator \n" +
-                    "  Options:\n" +
-                    "  - l = lower case letter\n" +
-                    "  - L = upper case letter\n" +
-                    "  - d = digit\n" +
-                    "  - s = special character (!#¤%&/(){}[]\n\n" +
-                    "Example: 14 lLssdd\n" +
-                    "  - Min. 1 lower case\n" +
-                    "  - Min. 1 upper case\n" +
-                    "  - Min. 2 special characters\n" +
-                    "  - Min. 2 digits\n" +
-                    "\nEnter your password parameters. If you can't think of any, just enter the ones in the example..."
+                    Properties.Resources.WeekOne_Task6_PasswordRequirements
                 );
             }
 
             Console.Clear();
             Console.WriteLine(
-                "Assignment 6 - Password generator.\n" +
-                "This assignment was about making random password generator based on userinput.\n\n\n"
+                Properties.Resources.WeekOne_Task6_Intro
             );
             HelpText(null);
 

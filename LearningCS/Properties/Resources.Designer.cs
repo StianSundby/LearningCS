@@ -89,6 +89,82 @@ namespace LearningCS.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Assignment 3 - Loops.
+        ///This assignment was all about understanding the different types of loops, which include: 
+        ///While, Do-While, Foreach and For
+        ///
+        ///There isn&apos;t anything to show here, the code just printed out a word 10 times.
+        ///Which was done four diffrent times with four different types of loops.
+        ///.
+        /// </summary>
+        internal static string WeekOne_Task3_Intro {
+            get {
+                return ResourceManager.GetString("WeekOne_Task3_Intro", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Assignment 4 - Letter counter.
+        ///Counts the number of each letter entered.
+        ///It left-aligns the text.
+        ///Also shows how much of the total percentage each letter used. If that makes any sense...
+        ///.
+        /// </summary>
+        internal static string WeekOne_Task4_Intro {
+            get {
+                return ResourceManager.GetString("WeekOne_Task4_Intro", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Assignment 5 - Return value.
+        ///This assignment consists of two tasks, where I had to write two methods.
+        ///The first method should return the sum of two numbers.
+        ///The second method should write out that it doesnt return anything to the console.
+        ///.
+        /// </summary>
+        internal static string WeekOne_Task5_Intro {
+            get {
+                return ResourceManager.GetString("WeekOne_Task5_Intro", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Assignment 6 - Password generator.
+        ///This assignment was about making random password generator based on userinput.
+        ///
+        ///
+        ///.
+        /// </summary>
+        internal static string WeekOne_Task6_Intro {
+            get {
+                return ResourceManager.GetString("WeekOne_Task6_Intro", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to PasswordGenerator 
+        ///  Options:
+        ///  - l = lower case letter
+        ///  - L = upper case letter
+        ///  - d = digit
+        ///  - s = special character (!#¤%&amp;/(){}[]
+        ///
+        ///Example: 14 lLssdd
+        ///  - Min. 1 lower case
+        ///  - Min. 1 upper case
+        ///  - Min. 2 special characters
+        ///  - Min. 2 digits
+        ///
+        ///Enter your password parameters. If you can&apos;t think of any, just enter the ones in the example....
+        /// </summary>
+        internal static string WeekOne_Task6_PasswordRequirements {
+            get {
+                return ResourceManager.GetString("WeekOne_Task6_PasswordRequirements", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to That&apos;s it. Press any key to return.
         /// </summary>
         internal static string WeekTwo_ReturnToPreviousMenu_ {
