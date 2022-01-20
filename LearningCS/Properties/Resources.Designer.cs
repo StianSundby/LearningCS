@@ -113,6 +113,38 @@ namespace LearningCS.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Task 1:
+        ///We were first tasked with copy pasting some code and figuring out what it does.
+        ///After that we were to add functionality to it, which are the following:
+        ///     Change it so that it handles both lowercase and capital letters.
+        ///     Show the count in %, not just a whole number
+        ///     Adjust the text so it prints to the right side of the console..
+        /// </summary>
+        internal static string WeekTwo_Task1_Intro {
+            get {
+                return ResourceManager.GetString("WeekTwo_Task1_Intro", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Assignment 8 - Puzzles.
+        ///We were given 4 puzzles that we had to solve.
+        ///The first three was about printing out some &apos;#&apos; to the console in a given pattern.
+        ///Pattern one being the easiest and three being the hardest.
+        ///The rules were as follows:
+        ///I can only write Console.Write(&apos;#&apos;), Console.Write(&apos; &apos;) and Console.WriteLine.
+        ///
+        ///The last puzzle was to count the number of words in the users input.
+        ///In addition to that it should count the amount of characters in the longest word.
+        ///The amount of vowels and any othe [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string WeekTwo_Task2_Intro {
+            get {
+                return ResourceManager.GetString("WeekTwo_Task2_Intro", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Press any key to get the next shape...
         ///.
         /// </summary>
@@ -132,12 +164,94 @@ namespace LearningCS.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Assignment 9 - Arrays.
+        ///We were given 5 puzzles that we had to solve.
+        ///Each one was to be solved using arrays in one way or another.
+        ///Press any key to view the first puzzle...
+        ///.
+        /// </summary>
+        internal static string WeekTwo_Task3_Intro {
+            get {
+                return ResourceManager.GetString("WeekTwo_Task3_Intro", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 
         ///Press any key to view the next puzzle....
         /// </summary>
         internal static string WeekTwo_Task3_Next {
             get {
                 return ResourceManager.GetString("WeekTwo_Task3_Next", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The problem:
+        ///Write a program that is given an array of integers and determines the mode,
+        ///which is the number that appears most frequently in the array.
+        ///.
+        /// </summary>
+        internal static string WeekTwo_Task3_ProblemFive_Intro {
+            get {
+                return ResourceManager.GetString("WeekTwo_Task3_ProblemFive_Intro", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The problem:
+        ///To make the ciphertext problem even more challenging, have your program randomly
+        ///generate the cipher array instead of a hard - coded const array.
+        ///Effectively, this means placing a random character in each element of the
+        ///array, but remember that you can’t substitute a letter for itself.So the first
+        ///element can’t be A, and you can’t use the same letter for two substitutions—
+        ///that is, if the first element is S, no other element can be S.
+        ///.
+        /// </summary>
+        internal static string WeekTwo_Task3_ProblemFour_Intro {
+            get {
+                return ResourceManager.GetString("WeekTwo_Task3_ProblemFour_Intro", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The problem:
+        ///Write a bool function that is passed an array and the number of elements in
+        ///that array and determines whether the data in the array is sorted.This should
+        ///require only one pass!
+        ///.
+        /// </summary>
+        internal static string WeekTwo_Task3_ProblemOne_Intro {
+            get {
+                return ResourceManager.GetString("WeekTwo_Task3_ProblemOne_Intro", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The problem:
+        ///Have the previous program convert the ciphertext back to the plaintext to
+        ///verify the encoding and decoding.
+        ///.
+        /// </summary>
+        internal static string WeekTwo_Task3_ProblemThree_Intro {
+            get {
+                return ResourceManager.GetString("WeekTwo_Task3_ProblemThree_Intro", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The problem:
+        ///Here’s a variation on the array of const values. Write a program for creating a
+        ///substitution cipher problem.In a substitution cipher problem, all messages
+        ///are made of uppercase letters and punctuation.The original message is called
+        ///the plaintext, and you create the ciphertext by substituting each letter with
+        ///another letter(for example, each C could become an X).For this problem,
+        ///hard-code a const array of 26 char elements for the cipher, and have your
+        ///program read a plaintext message and [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string WeekTwo_Task3_ProblemTwo_Intro {
+            get {
+                return ResourceManager.GetString("WeekTwo_Task3_ProblemTwo_Intro", resourceCulture);
             }
         }
     }

@@ -23,12 +23,7 @@ namespace LearningCS
         public static void Task1()
         {
             Console.Clear();
-            Console.WriteLine("Task 1:\n"+
-                              "We were first tasked with copy pasting some code and figuring out what it does.\n"+
-                              "After that we were to add functionality to it, which are the following:\n"+
-                              "     Change it so that it handles both lowercase and capital letters.\n"+
-                              "     Show the count in %, not just a whole number\n"+
-                              "     Adjust the text so it prints to the right side of the console.");
+            Console.WriteLine(Properties.Resources.WeekTwo_Task1_Intro);
             Console.WriteLine("Type in some text and have the program count each character...");
             const int range = 255;
             var asciiTable = new int[range];
@@ -53,16 +48,7 @@ namespace LearningCS
         {
             Console.Clear();
             Console.WriteLine(
-                "Assignment 8 - Puzzles.\n" +
-                "We were given 4 puzzles that we had to solve.\n" +
-                "The first three was about printing out some '#' to the console in a given pattern.\n" +
-                "Pattern one being the easiest and three being the hardest.\n" +
-                "The rules were as follows:\n" +
-                "I can only write Console.Write('#'), Console.Write(' ') and Console.WriteLine.\n\n" +
-                "The last puzzle was to count the number of words in the users input.\n" +
-                "In addition to that it should count the amount of characters in the longest word.\n" +
-                "The amount of vowels and any other statistic we could thing of.\n\n" +
-                "Press any key to view the first puzzle..."
+                Properties.Resources.WeekTwo_Task2_Intro
             );
             Console.ReadKey(true);
 
@@ -246,10 +232,7 @@ namespace LearningCS
         {
             Console.Clear();
             Console.WriteLine(
-                "Assignment 9 - Arrays.\n" +
-                "We were given 5 puzzles that we had to solve.\n" +
-                "Each one was to be solved using arrays in one way or another.\n" +
-                "Press any key to view the first puzzle...\n"
+                Properties.Resources.WeekTwo_Task3_Intro
             );
             Console.ReadKey(true);
             ProblemOne();
@@ -262,10 +245,7 @@ namespace LearningCS
             {
                 Console.Clear();
                 Console.WriteLine(
-                    "The problem:\n" +
-                    "Write a bool function that is passed an array and the number of elements in\n" +
-                    "that array and determines whether the data in the array is sorted.This should\n" +
-                    "require only one pass!\n");
+                    Properties.Resources.WeekTwo_Task3_ProblemOne_Intro);
                 int[] array = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
                 Console.WriteLine("Checking if array is sorted, which it should be...");
                 Console.WriteLine(IsSorted(array, array.Length) 
@@ -290,14 +270,7 @@ namespace LearningCS
             {
                 Console.Clear();
                 Console.WriteLine(
-                    "The problem:\n" +
-                    "Here’s a variation on the array of const values. Write a program for creating a\n" +
-                    "substitution cipher problem.In a substitution cipher problem, all messages\n" +
-                    "are made of uppercase letters and punctuation.The original message is called\n" +
-                    "the plaintext, and you create the ciphertext by substituting each letter with\n" +
-                    "another letter(for example, each C could become an X).For this problem,\n" +
-                    "hard-code a const array of 26 char elements for the cipher, and have your\n" +
-                    "program read a plaintext message and output the equivalent ciphertext.\n"
+                    Properties.Resources.WeekTwo_Task3_ProblemTwo_Intro
                 );
                 
                 Console.WriteLine("Enter some text to have it be converted ciphertext...");
@@ -342,9 +315,7 @@ namespace LearningCS
             static void ProblemThree(string cipherText)
             {
                 Console.WriteLine(
-                    "The problem:\n" +
-                    "Have the previous program convert the ciphertext back to the plaintext to\n" +
-                    "verify the encoding and decoding.\n"
+                    Properties.Resources.WeekTwo_Task3_ProblemThree_Intro
                 );
                 const string alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZÆØÅ";
                 const string cipherCode = "HVSEÆKXCOUDAJQGØNZTMYRÅFPIWBL";
@@ -381,13 +352,7 @@ namespace LearningCS
             {
                 Console.Clear();
                 Console.WriteLine(
-                    "The problem:\n" +
-                    "To make the ciphertext problem even more challenging, have your program randomly\n" +
-                    "generate the cipher array instead of a hard - coded const array.\n" +
-                    "Effectively, this means placing a random character in each element of the\n" +
-                    "array, but remember that you can’t substitute a letter for itself.So the first\n" +
-                    "element can’t be A, and you can’t use the same letter for two substitutions—\n" +
-                    "that is, if the first element is S, no other element can be S.\n"
+                    Properties.Resources.WeekTwo_Task3_ProblemFour_Intro
                 );
 
                 Console.WriteLine("Press any key to view the ciphercode...");
@@ -429,9 +394,7 @@ namespace LearningCS
             {
                 Console.Clear();
                 Console.WriteLine(
-                    "The problem:\n" +
-                    "Write a program that is given an array of integers and determines the mode,\n" +
-                    "which is the number that appears most frequently in the array.\n"
+                    Properties.Resources.WeekTwo_Task3_ProblemFive_Intro
                 );
                 var intArray = new[] { 8, 7, 3, 9, 2, 1, 7, 5, 4, 5, 4, 7, 3, 2, 1, 7, 3, 7, 8};
                 Array.Sort(intArray);

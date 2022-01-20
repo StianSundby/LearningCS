@@ -72,4 +72,73 @@ Press any key to view the next puzzle...</value>
 	<data name="WeekTwo_Task2_NextPuzzle" xml:space="preserve">
 		<value>Press any key to view the next puzzle...</value>
 	</data>
+	<data name="WeekTwo_Task1_Intro" xml:space="preserve">
+		<value>Task 1:
+We were first tasked with copy pasting some code and figuring out what it does.
+After that we were to add functionality to it, which are the following:
+     Change it so that it handles both lowercase and capital letters.
+     Show the count in %, not just a whole number
+     Adjust the text so it prints to the right side of the console.</value>
+	</data>
+	<data name="WeekTwo_Task2_Intro" xml:space="preserve">
+		<value>Assignment 8 - Puzzles.
+We were given 4 puzzles that we had to solve.
+The first three was about printing out some '#' to the console in a given pattern.
+Pattern one being the easiest and three being the hardest.
+The rules were as follows:
+I can only write Console.Write('#'), Console.Write(' ') and Console.WriteLine.
+
+The last puzzle was to count the number of words in the users input.
+In addition to that it should count the amount of characters in the longest word.
+The amount of vowels and any other statistic we could thing of.
+
+Press any key to view the first puzzle...</value>
+	</data>
+	<data name="WeekTwo_Task3_Intro" xml:space="preserve">
+		<value>Assignment 9 - Arrays.
+We were given 5 puzzles that we had to solve.
+Each one was to be solved using arrays in one way or another.
+Press any key to view the first puzzle...
+</value>
+	</data>
+	<data name="WeekTwo_Task3_ProblemOne_Intro" xml:space="preserve">
+		<value>The problem:
+Write a bool function that is passed an array and the number of elements in
+that array and determines whether the data in the array is sorted.This should
+require only one pass!
+</value>
+	</data>
+	<data name="WeekTwo_Task3_ProblemTwo_Intro" xml:space="preserve">
+		<value>The problem:
+Here’s a variation on the array of const values. Write a program for creating a
+substitution cipher problem.In a substitution cipher problem, all messages
+are made of uppercase letters and punctuation.The original message is called
+the plaintext, and you create the ciphertext by substituting each letter with
+another letter(for example, each C could become an X).For this problem,
+hard-code a const array of 26 char elements for the cipher, and have your
+program read a plaintext message and output the equivalent ciphertext.
+</value>
+	</data>
+	<data name="WeekTwo_Task3_ProblemThree_Intro" xml:space="preserve">
+		<value>The problem:
+Have the previous program convert the ciphertext back to the plaintext to
+verify the encoding and decoding.
+</value>
+	</data>
+	<data name="WeekTwo_Task3_ProblemFour_Intro" xml:space="preserve">
+		<value>The problem:
+To make the ciphertext problem even more challenging, have your program randomly
+generate the cipher array instead of a hard - coded const array.
+Effectively, this means placing a random character in each element of the
+array, but remember that you can’t substitute a letter for itself.So the first
+element can’t be A, and you can’t use the same letter for two substitutions—
+that is, if the first element is S, no other element can be S.
+</value>
+	</data>
+	<data name="WeekTwo_Task3_ProblemFive_Intro" xml:space="preserve">
+		<value>The problem:
+Write a program that is given an array of integers and determines the mode,
+which is the number that appears most frequently in the array.
+</value>
+	</data>
 </root>
