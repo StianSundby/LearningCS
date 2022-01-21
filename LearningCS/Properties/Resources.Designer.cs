@@ -61,35 +61,36 @@ namespace LearningCS.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The weeks will be added when needed..
+        ///   Looks up a localized string similar to That&apos;s it. Press any key to return....
         /// </summary>
-        internal static string Program_ChooseWeek_ {
+        internal static string ReturnToPreviousMenu {
             get {
-                return ResourceManager.GetString("Program_ChooseWeek_", resourceCulture);
+                return ResourceManager.GetString("ReturnToPreviousMenu", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to That&apos;s it. Press any key to return.
+        ///   Looks up a localized string similar to Task 1 - Writing to Console:.
         /// </summary>
-        internal static string WeekOne_ReturnToPreviousMenu_ {
+        internal static string WeekOne_Task1_Intro {
             get {
-                return ResourceManager.GetString("WeekOne_ReturnToPreviousMenu_", resourceCulture);
+                return ResourceManager.GetString("WeekOne_Task1_Intro", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Assignment 2 - String Interpolation.There was also an assignment about debugging arguments, but I can&apos;t showcase that here.
+        ///   Looks up a localized string similar to Task 2 - String Interpolation:
+        ///There was also an assignment about debugging arguments, but I can&apos;t showcase that here.
         ///.
         /// </summary>
-        internal static string WeekOne_Task2_ {
+        internal static string WeekOne_Task2_Intro {
             get {
-                return ResourceManager.GetString("WeekOne_Task2_", resourceCulture);
+                return ResourceManager.GetString("WeekOne_Task2_Intro", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Assignment 3 - Loops.
+        ///   Looks up a localized string similar to Task 3 - Loops:
         ///This assignment was all about understanding the different types of loops, which include: 
         ///While, Do-While, Foreach and For
         ///
@@ -104,7 +105,7 @@ namespace LearningCS.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Assignment 4 - Letter counter.
+        ///   Looks up a localized string similar to Task 4 - Letter counter:
         ///Counts the number of each letter entered.
         ///It left-aligns the text.
         ///Also shows how much of the total percentage each letter used. If that makes any sense...
@@ -117,7 +118,7 @@ namespace LearningCS.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Assignment 5 - Return value.
+        ///   Looks up a localized string similar to Task 5 - Return value:
         ///This assignment consists of two tasks, where I had to write two methods.
         ///The first method should return the sum of two numbers.
         ///The second method should write out that it doesnt return anything to the console.
@@ -130,7 +131,7 @@ namespace LearningCS.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Assignment 6 - Password generator.
+        ///   Looks up a localized string similar to Task 6 - Password generator:
         ///This assignment was about making random password generator based on userinput.
         ///
         ///
@@ -144,11 +145,11 @@ namespace LearningCS.Properties {
         
         /// <summary>
         ///   Looks up a localized string similar to PasswordGenerator 
-        ///  Options:
-        ///  - l = lower case letter
-        ///  - L = upper case letter
-        ///  - d = digit
-        ///  - s = special character (!#¤%&amp;/(){}[]
+        ///    Options:
+        ///        - l = lower case letter
+        ///        - L = upper case letter
+        ///        - d = digit
+        ///        - s = special character (!#¤%&amp;/(){}[]
         ///
         ///Example: 14 lLssdd
         ///  - Min. 1 lower case
@@ -165,7 +166,7 @@ namespace LearningCS.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Task 1:
+        ///   Looks up a localized string similar to Task 1 - Read from File:
         ///We were tasked with making a program that reads and handles data from a text file.
         ///And with this data we were to make a word-riddle generator. All of the riddles are inNorwegian..
         /// </summary>
@@ -176,7 +177,7 @@ namespace LearningCS.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Task 2:
+        ///   Looks up a localized string similar to Task 2 - Class properties and constructors:
         ///We were tasked with making a program that utilizes classes and constructors.
         ///The class was to have an object variable &apos;Name&apos; that was to be called from theClass and printed to the console. We were also to print out a line 10 times.
         ///Press any key to continue...
@@ -185,6 +186,21 @@ namespace LearningCS.Properties {
         internal static string WeekThree_Task2_Intro {
             get {
                 return ResourceManager.GetString("WeekThree_Task2_Intro", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Task 3 - Method overloading:
+        ///This task is similar to the last one, but we were to overload methods in the class.
+        ///Our default method was to print &apos;Hello and welcome&apos;. And we were to overload 
+        ///that method with a string parameter. So it would print:
+        ///Hello and welcome, [name]&apos; instead.
+        ///
+        ///Press any key to continue....
+        /// </summary>
+        internal static string WeekThree_Task3_Intro {
+            get {
+                return ResourceManager.GetString("WeekThree_Task3_Intro", resourceCulture);
             }
         }
         
@@ -198,22 +214,7 @@ namespace LearningCS.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Assignment 7 - Debugging.
-        ///			The code provided for this assignment is the same as in WeekOne, Task 4.
-        ///			It was about teaching us debugging in Visual Studio. 
-        ///			Breakpoints, step-into, step-over and step-out. 
-        ///			There isn&apos;t alot to show here. But feel free to: 
-        ///
-        ///			Type in some letters and the code will count the amount of each one....
-        /// </summary>
-        internal static string WeekTwo_Task1_ {
-            get {
-                return ResourceManager.GetString("WeekTwo_Task1_", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Task 1:
+        ///   Looks up a localized string similar to Task 1 - Adding functionality:
         ///We were first tasked with copy pasting some code and figuring out what it does.
         ///After that we were to add functionality to it, which are the following:
         ///     Change it so that it handles both lowercase and capital letters.
@@ -227,7 +228,7 @@ namespace LearningCS.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Assignment 8 - Puzzles.
+        ///   Looks up a localized string similar to Task 2 - Puzzles:
         ///We were given 4 puzzles that we had to solve.
         ///The first three was about printing out some &apos;#&apos; to the console in a given pattern.
         ///Pattern one being the easiest and three being the hardest.
@@ -236,21 +237,11 @@ namespace LearningCS.Properties {
         ///
         ///The last puzzle was to count the number of words in the users input.
         ///In addition to that it should count the amount of characters in the longest word.
-        ///The amount of vowels and any othe [rest of string was truncated]&quot;;.
+        ///The amount of vowels and any other stat [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string WeekTwo_Task2_Intro {
             get {
                 return ResourceManager.GetString("WeekTwo_Task2_Intro", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Press any key to get the next shape...
-        ///.
-        /// </summary>
-        internal static string WeekTwo_Task2_Next {
-            get {
-                return ResourceManager.GetString("WeekTwo_Task2_Next", resourceCulture);
             }
         }
         
@@ -264,7 +255,17 @@ namespace LearningCS.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Assignment 9 - Arrays.
+        ///   Looks up a localized string similar to Press any key to view the next shape...
+        ///.
+        /// </summary>
+        internal static string WeekTwo_Task2_NextShape {
+            get {
+                return ResourceManager.GetString("WeekTwo_Task2_NextShape", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Task 3 - Arrays.
         ///We were given 5 puzzles that we had to solve.
         ///Each one was to be solved using arrays in one way or another.
         ///Press any key to view the first puzzle...
@@ -273,16 +274,6 @@ namespace LearningCS.Properties {
         internal static string WeekTwo_Task3_Intro {
             get {
                 return ResourceManager.GetString("WeekTwo_Task3_Intro", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 
-        ///Press any key to view the next puzzle....
-        /// </summary>
-        internal static string WeekTwo_Task3_Next {
-            get {
-                return ResourceManager.GetString("WeekTwo_Task3_Next", resourceCulture);
             }
         }
         

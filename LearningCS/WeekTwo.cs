@@ -221,7 +221,7 @@ namespace LearningCS
 
             void NextPuzzle()
             {
-                Console.WriteLine(Properties.Resources.WeekTwo_Task2_NextPuzzle);
+                Console.WriteLine(Properties.Resources.WeekTwo_Task2_NextShape);
                 Console.ReadKey(true);
             }
         }
@@ -249,7 +249,7 @@ namespace LearningCS
                 Console.WriteLine(IsSorted(array, array.Length) 
                     ? "The array is sorted." 
                     : "The array is not sorted.");
-                Console.WriteLine("\nPress any key to view the next puzzle...");
+                Console.WriteLine(Properties.Resources.WeekTwo_Task2_NextPuzzle);
                 Console.ReadKey(true);
                 bool IsSorted(IReadOnlyList<int> arrayToCheck, int length)
                 {

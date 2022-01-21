@@ -1,87 +1,153 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
-	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-		<xsd:element name="root" msdata:IsDataSet="true">
-			<xsd:complexType>
-				<xsd:choice maxOccurs="unbounded">
-					<xsd:element name="data">
-						<xsd:complexType>
-							<xsd:sequence>
-								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
-							</xsd:sequence>
-							<xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
-							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
-							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
-						</xsd:complexType>
-					</xsd:element>
-					<xsd:element name="resheader">
-						<xsd:complexType>
-							<xsd:sequence>
-								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-							</xsd:sequence>
-							<xsd:attribute name="name" type="xsd:string" use="required" />
-						</xsd:complexType>
-					</xsd:element>
-				</xsd:choice>
-			</xsd:complexType>
-		</xsd:element>
-	</xsd:schema>
-	<resheader name="resmimetype">
-		<value>text/microsoft-resx</value>
-	</resheader>
-	<resheader name="version">
-		<value>1.3</value>
-	</resheader>
-	<resheader name="reader">
-		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-	</resheader>
-	<resheader name="writer">
-		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-	</resheader>
-	<data name="Program_ChooseWeek_" xml:space="preserve">
-		<value>The weeks will be added when needed.</value>
-	</data>
-	<data name="WeekOne_ReturnToPreviousMenu_" xml:space="preserve">
-		<value>That's it. Press any key to return</value>
-	</data>
-	<data name="WeekOne_Task2_" xml:space="preserve">
-		<value>Assignment 2 - String Interpolation.There was also an assignment about debugging arguments, but I can't showcase that here.
-</value>
-	</data>
-	<data name="WeekTwo_Task1_" xml:space="preserve">
-		<value>Assignment 7 - Debugging.
-			The code provided for this assignment is the same as in WeekOne, Task 4.
-			It was about teaching us debugging in Visual Studio. 
-			Breakpoints, step-into, step-over and step-out. 
-			There isn't alot to show here. But feel free to: 
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
 
-			Type in some letters and the code will count the amount of each one...</value>
-	</data>
-	<data name="WeekTwo_ReturnToPreviousMenu_" xml:space="preserve">
-		<value>That's it. Press any key to return</value>
-	</data>
-	<data name="WeekTwo_Task2_Next" xml:space="preserve">
-		<value>Press any key to get the next shape...
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ReturnToPreviousMenu" xml:space="preserve">
+    <value>That's it. Press any key to return...</value>
+  </data>
+  <data name="WeekOne_Task1_Intro" xml:space="preserve">
+    <value>Task 1 - Writing to Console:</value>
+  </data>
+  <data name="WeekOne_Task2_Intro" xml:space="preserve">
+    <value>Task 2 - String Interpolation:
+There was also an assignment about debugging arguments, but I can't showcase that here.
 </value>
-	</data>
-	<data name="WeekTwo_Task3_Next" xml:space="preserve">
-		<value>
-Press any key to view the next puzzle...</value>
-	</data>
-	<data name="WeekTwo_Task2_NextPuzzle" xml:space="preserve">
-		<value>Press any key to view the next puzzle...</value>
-	</data>
-	<data name="WeekTwo_Task1_Intro" xml:space="preserve">
-		<value>Task 1:
+  </data>
+  <data name="WeekTwo_ReturnToPreviousMenu_" xml:space="preserve">
+    <value>That's it. Press any key to return</value>
+  </data>
+  <data name="WeekTwo_Task2_NextShape" xml:space="preserve">
+    <value>Press any key to view the next shape...
+</value>
+  </data>
+  <data name="WeekTwo_Task2_NextPuzzle" xml:space="preserve">
+    <value>Press any key to view the next puzzle...</value>
+  </data>
+  <data name="WeekTwo_Task1_Intro" xml:space="preserve">
+    <value>Task 1 - Adding functionality:
 We were first tasked with copy pasting some code and figuring out what it does.
 After that we were to add functionality to it, which are the following:
      Change it so that it handles both lowercase and capital letters.
      Show the count in %, not just a whole number
      Adjust the text so it prints to the right side of the console.</value>
-	</data>
-	<data name="WeekTwo_Task2_Intro" xml:space="preserve">
-		<value>Assignment 8 - Puzzles.
+  </data>
+  <data name="WeekTwo_Task2_Intro" xml:space="preserve">
+    <value>Task 2 - Puzzles:
 We were given 4 puzzles that we had to solve.
 The first three was about printing out some '#' to the console in a given pattern.
 Pattern one being the easiest and three being the hardest.
@@ -93,23 +159,23 @@ In addition to that it should count the amount of characters in the longest word
 The amount of vowels and any other statistic we could thing of.
 
 Press any key to view the first puzzle...</value>
-	</data>
-	<data name="WeekTwo_Task3_Intro" xml:space="preserve">
-		<value>Assignment 9 - Arrays.
+  </data>
+  <data name="WeekTwo_Task3_Intro" xml:space="preserve">
+    <value>Task 3 - Arrays.
 We were given 5 puzzles that we had to solve.
 Each one was to be solved using arrays in one way or another.
 Press any key to view the first puzzle...
 </value>
-	</data>
-	<data name="WeekTwo_Task3_ProblemOne_Intro" xml:space="preserve">
-		<value>The problem:
+  </data>
+  <data name="WeekTwo_Task3_ProblemOne_Intro" xml:space="preserve">
+    <value>The problem:
 Write a bool function that is passed an array and the number of elements in
 that array and determines whether the data in the array is sorted.This should
 require only one pass!
 </value>
-	</data>
-	<data name="WeekTwo_Task3_ProblemTwo_Intro" xml:space="preserve">
-		<value>The problem:
+  </data>
+  <data name="WeekTwo_Task3_ProblemTwo_Intro" xml:space="preserve">
+    <value>The problem:
 Here’s a variation on the array of const values. Write a program for creating a
 substitution cipher problem.In a substitution cipher problem, all messages
 are made of uppercase letters and punctuation.The original message is called
@@ -118,15 +184,15 @@ another letter(for example, each C could become an X).For this problem,
 hard-code a const array of 26 char elements for the cipher, and have your
 program read a plaintext message and output the equivalent ciphertext.
 </value>
-	</data>
-	<data name="WeekTwo_Task3_ProblemThree_Intro" xml:space="preserve">
-		<value>The problem:
+  </data>
+  <data name="WeekTwo_Task3_ProblemThree_Intro" xml:space="preserve">
+    <value>The problem:
 Have the previous program convert the ciphertext back to the plaintext to
 verify the encoding and decoding.
 </value>
-	</data>
-	<data name="WeekTwo_Task3_ProblemFour_Intro" xml:space="preserve">
-		<value>The problem:
+  </data>
+  <data name="WeekTwo_Task3_ProblemFour_Intro" xml:space="preserve">
+    <value>The problem:
 To make the ciphertext problem even more challenging, have your program randomly
 generate the cipher array instead of a hard - coded const array.
 Effectively, this means placing a random character in each element of the
@@ -134,50 +200,50 @@ array, but remember that you can’t substitute a letter for itself.So the first
 element can’t be A, and you can’t use the same letter for two substitutions—
 that is, if the first element is S, no other element can be S.
 </value>
-	</data>
-	<data name="WeekTwo_Task3_ProblemFive_Intro" xml:space="preserve">
-		<value>The problem:
+  </data>
+  <data name="WeekTwo_Task3_ProblemFive_Intro" xml:space="preserve">
+    <value>The problem:
 Write a program that is given an array of integers and determines the mode,
 which is the number that appears most frequently in the array.
 </value>
-	</data>
-	<data name="WeekOne_Task3_Intro" xml:space="preserve">
-		<value>Assignment 3 - Loops.
+  </data>
+  <data name="WeekOne_Task3_Intro" xml:space="preserve">
+    <value>Task 3 - Loops:
 This assignment was all about understanding the different types of loops, which include: 
 While, Do-While, Foreach and For
 
 There isn't anything to show here, the code just printed out a word 10 times.
 Which was done four diffrent times with four different types of loops.
 </value>
-	</data>
-	<data name="WeekOne_Task4_Intro" xml:space="preserve">
-		<value>Assignment 4 - Letter counter.
+  </data>
+  <data name="WeekOne_Task4_Intro" xml:space="preserve">
+    <value>Task 4 - Letter counter:
 Counts the number of each letter entered.
 It left-aligns the text.
 Also shows how much of the total percentage each letter used. If that makes any sense...
 </value>
-	</data>
-	<data name="WeekOne_Task5_Intro" xml:space="preserve">
-		<value>Assignment 5 - Return value.
+  </data>
+  <data name="WeekOne_Task5_Intro" xml:space="preserve">
+    <value>Task 5 - Return value:
 This assignment consists of two tasks, where I had to write two methods.
 The first method should return the sum of two numbers.
 The second method should write out that it doesnt return anything to the console.
 </value>
-	</data>
-	<data name="WeekOne_Task6_Intro" xml:space="preserve">
-		<value>Assignment 6 - Password generator.
+  </data>
+  <data name="WeekOne_Task6_Intro" xml:space="preserve">
+    <value>Task 6 - Password generator:
 This assignment was about making random password generator based on userinput.
 
 
 </value>
-	</data>
-	<data name="WeekOne_Task6_PasswordRequirements" xml:space="preserve">
-		<value>PasswordGenerator 
-  Options:
-  - l = lower case letter
-  - L = upper case letter
-  - d = digit
-  - s = special character (!#¤%&amp;/(){}[]
+  </data>
+  <data name="WeekOne_Task6_PasswordRequirements" xml:space="preserve">
+    <value>PasswordGenerator 
+    Options:
+        - l = lower case letter
+        - L = upper case letter
+        - d = digit
+        - s = special character (!#¤%&amp;/(){}[]
 
 Example: 14 lLssdd
   - Min. 1 lower case
@@ -186,17 +252,26 @@ Example: 14 lLssdd
   - Min. 2 digits
 
 Enter your password parameters. If you can't think of any, just enter the ones in the example...</value>
-	</data>
-	<data name="WeekThree_Task1_Intro" xml:space="preserve">
-		<value>Task 1:
+  </data>
+  <data name="WeekThree_Task1_Intro" xml:space="preserve">
+    <value>Task 1 - Read from File:
 We were tasked with making a program that reads and handles data from a text file.
 And with this data we were to make a word-riddle generator. All of the riddles are inNorwegian.</value>
-	</data>
-	<data name="WeekThree_Task2_Intro" xml:space="preserve">
-		<value>Task 2:
+  </data>
+  <data name="WeekThree_Task2_Intro" xml:space="preserve">
+    <value>Task 2 - Class properties and constructors:
 We were tasked with making a program that utilizes classes and constructors.
 The class was to have an object variable 'Name' that was to be called from theClass and printed to the console. We were also to print out a line 10 times.
 Press any key to continue...
 </value>
-	</data>
+  </data>
+  <data name="WeekThree_Task3_Intro" xml:space="preserve">
+    <value>Task 3 - Method overloading:
+This task is similar to the last one, but we were to overload methods in the class.
+Our default method was to print 'Hello and welcome'. And we were to overload 
+that method with a string parameter. So it would print:
+Hello and welcome, [name]' instead.
+
+Press any key to continue...</value>
+  </data>
 </root>

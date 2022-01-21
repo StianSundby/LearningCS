@@ -21,9 +21,7 @@ namespace LearningCS
         public static void Task1()
         {
             Console.Clear();
-            Console.WriteLine("Task 1:\n"+
-                              "Writing to console.\n");
-
+            Console.WriteLine(Properties.Resources.WeekOne_Task1_Intro);
             Console.WriteLine("Hello, what's your name?");
             var linje1 = Console.ReadLine();
             Console.WriteLine("Welcome, " + linje1);
@@ -34,10 +32,7 @@ namespace LearningCS
         public static void Task2()
         {
             Console.Clear();
-            Console.WriteLine(
-                "Task 2:\n"+
-                "Input variables and string interpolation."
-            );
+            Console.WriteLine(Properties.Resources.WeekOne_Task2_Intro);
 
             const int a = 5;
             const int b = 30;
