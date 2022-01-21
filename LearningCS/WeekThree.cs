@@ -12,7 +12,7 @@ namespace LearningCS
 
         private static void ReturnToPreviousMenu()
         {
-            Console.WriteLine("\nThat's it. Press any key to return...");
+            Console.WriteLine(Properties.Resources.ReturnToPreviousMenu);
             Console.ReadKey(true);
             GoBack();
         }
@@ -102,16 +102,18 @@ namespace LearningCS
         public static void Task3()
         {
             Console.Clear();
-            Console.WriteLine("Task 3:\n" +
-                              "This task is similar to the last one, but we were to overload methods in the class.\n" +
-                              "Our default method was to print 'Hello and welcome'\n"+
-                              "And we were to overload that method with a string parameter. So it would print\n" +
-                              "'Hello and welcome, [name]' instead.\n"+
-                              "Press any key to continue...\n");
+            Console.WriteLine(Properties.Resources.WeekThree_Task3_Intro);
             Console.ReadKey(true);
             var welcomeMessage = new WelcomeMessage("Hello and welcome");
             welcomeMessage.PrintWelcomeMessage("Terje");
             ReturnToPreviousMenu();
+        }
+
+        public static void Task4()
+        {
+            Console.Clear();
+            Console.WriteLine("Task 4:\n" +
+                              "");
         }
     }
 }
