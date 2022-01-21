@@ -3,6 +3,7 @@ using System.IO;
 using System.Collections.Generic;
 using System.Text;
 using LearningCS.Resources.TaskClasses;
+using LearningCS.Resources.TaskClasses.CSGO;
 
 namespace LearningCS
 {
@@ -112,8 +113,16 @@ namespace LearningCS
         public static void Task4()
         {
             Console.Clear();
-            Console.WriteLine("Task 4:\n" +
-                              "");
+            Console.WriteLine("Task 4");
+            Console.ReadKey(true);
+        }
+
+        public static async void Task5()
+        {
+            Console.Clear();
+            Console.WriteLine("Task 5 - CSGO Clone:");
+            Console.ReadKey(true);
+            await CounterStrike.StartGame();
         }
     }
 }
