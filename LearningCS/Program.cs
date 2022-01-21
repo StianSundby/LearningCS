@@ -123,6 +123,7 @@ namespace LearningCS
                     new("Task 2 - Class properties and constructors", WeekThree.Task2),
                     new("Task 3 - Method overlading", WeekThree.Task3),
                     new("Task 4 - Reverse Engineering", WeekThree.Task4),
+                    new("Task 5 - CSGO clone in the console", WeekThree.Task5),
                     new("Help", () => Console.WriteLine(HelpText())),
                     new("Back", ChooseWeek),
                     new("Exit", () => Environment.Exit(0)),
@@ -138,7 +139,6 @@ namespace LearningCS
     {
         public string Name { get; }
         public Action Selected { get; }
-
         public Option(string name, Action selected)
         {
             Name = name;
