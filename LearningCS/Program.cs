@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using LearningCS.Properties;
 
 namespace LearningCS
 {
@@ -44,7 +43,6 @@ namespace LearningCS
                             index++;
                             WriteMenu(Options, Options[index]);
                         }
-
                         break;
                     }
                     case ConsoleKey.UpArrow:
@@ -100,29 +98,31 @@ namespace LearningCS
             {
                 "WeekOne" => new List<Option>
                 {
-                    new("Task 1", WeekOne.Task1),
-                    new("Task 2", WeekOne.Task2),
-                    new("Task 3", WeekOne.Task3),
-                    new("Task 4", WeekOne.Task4),
-                    new("Task 5", WeekOne.Task5),
-                    new("Task 6", WeekOne.Task6),
+                    new("Task 1 - Writing to Console", WeekOne.Task1),
+                    new("Task 2 - String Interpolation", WeekOne.Task2),
+                    new("Task 3 - Loops", WeekOne.Task3),
+                    new("Task 4 - Character Counter", WeekOne.Task4),
+                    new("Task 5 - Return values", WeekOne.Task5),
+                    new("Task 6 - Password Generator", WeekOne.Task6),
                     new("Help", () => Console.WriteLine(HelpText())),
                     new("Back", ChooseWeek),
                     new("Exit", () => Environment.Exit(0)),
                 },
                 "WeekTwo" => new List<Option>
                 {
-                    new("Task 1", WeekTwo.Task1),
-                    new("Task 2", WeekTwo.Task2),
-                    new("Task 3", WeekTwo.Task3),
+                    new("Task 1 - Adding Functionality", WeekTwo.Task1),
+                    new("Task 2 - Puzzles", WeekTwo.Task2),
+                    new("Task 3 - Arrays", WeekTwo.Task3),
                     new("Help", () => Console.WriteLine(HelpText())),
                     new("Back", ChooseWeek),
                     new("Exit", () => Environment.Exit(0)),
                 },
                 "WeekThree" => new List<Option>
                 {
-                    new("Task 1", WeekThree.Task1),
-                    new("Task 2", WeekThree.Task2),
+                    new("Task 1 - Read from file", WeekThree.Task1),
+                    new("Task 2 - Class properties and constructors", WeekThree.Task2),
+                    new("Task 3 - Method overlading", WeekThree.Task3),
+                    new("Task 4 - Reverse Engineering", WeekThree.Task4),
                     new("Help", () => Console.WriteLine(HelpText())),
                     new("Back", ChooseWeek),
                     new("Exit", () => Environment.Exit(0)),
