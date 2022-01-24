@@ -85,6 +85,7 @@ namespace LearningCS
                 new("Week 1", () => ChooseTask("WeekOne")),
                 new("Week 2", () => ChooseTask("WeekTwo")),
                 new("Week 3", () => ChooseTask("WeekThree")),
+                new("Week 4", () => ChooseTask("WeekFour")),
                 new("Help", () =>  Console.WriteLine(HelpText())),
                 new("Exit", () => Environment.Exit(0)),
             };
