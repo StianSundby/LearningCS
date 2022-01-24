@@ -2,6 +2,7 @@
 using System.IO;
 using System.Collections.Generic;
 using System.Text;
+using LearningCS.Resources;
 using LearningCS.Resources.TaskClasses;
 using LearningCS.Resources.TaskClasses.CSGO;
 
@@ -113,16 +114,40 @@ namespace LearningCS
         public static void Task4()
         {
             Console.Clear();
-            Console.WriteLine("Task 4");
+            Console.WriteLine(Properties.Resources.WeekThree_Task4_Intro);
             Console.ReadKey(true);
+            Console.WriteLine("\n\nValid bets: \r\n - H, D, A\r\n - halfnhalf: HD, HA, DA\r\n - full: HDA\rWhat is your bet?");
+            var bet = Console.ReadLine();
+            if (bet == null) return; //redundancy
+            var match = new Match(bet);
+            while (!Match.GameRunning)
+            {
+                Console.WriteLine("Commands: \r\n - H = hometeam goal\r\n - A = awayteam goal\r\n - X = game over\r\nEnter command: ");
+                var command = Console.ReadLine();
+                switch (command)
+                {
+                    case "X":
+                        match.Stop();
+                        break;
+                    case "H" or "A":
+                        match.AddGoal("H");
+                        break;
+                }
+                Console.WriteLine($"Game position: {match.GetScore()}");
+            }
+
+            var correctBet = match.CorrectBet() ? "correct" : "wrong";
+            Console.WriteLine($"Your bet was {correctBet}");
         }
 
         public static async void Task5()
         {
             Console.Clear();
-            Console.WriteLine("Task 5 - CSGO Clone:");
+            Console.WriteLine(Properties.Resources.WeekThree_Task5_Intro);
             Console.ReadKey(true);
+            Console.WriteLine();
             await CounterStrike.StartGame();
+            ReturnToPreviousMenu();
         }
     }
 }
