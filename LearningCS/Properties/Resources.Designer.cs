@@ -205,6 +205,36 @@ namespace LearningCS.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Task 4 - Betting on a football match:
+        ///In this assignment we were given some prewritten code, that we were to rewrite and
+        ///make more objectoriented. In addition, the code was to do this:
+        ///&quot;Imagine you&apos;ve placed a bet on a match, and want to know how many correct bets you have.
+        ///For now we&apos;re just going to simulate one match. The code reads what the user bet, valid bets are
+        ///H, U or B. But also HU, HB and UB for halfgrade and HUB for fullgrade.&quot;
+        ///I don&apos;t know what the bets mean, but I assume they&apos;re Home, Dr [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string WeekThree_Task4_Intro {
+            get {
+                return ResourceManager.GetString("WeekThree_Task4_Intro", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Task 5 - CSGO in the console:
+        ///This task was about recreating the core gamemechanics of Counter Strike Global Offensive
+        ///as a console application. Which means this:
+        ///    -One team consists of 5 members, each member has a value tracking if they are alive or dead.
+        ///    -The terrorist team has a FindBombSite() method and a KillCounterTerrorist() method.
+        ///    -Finding the site, and shooting at other players should have a random chance of succeeding.
+        ///    -Planting the bomb should take 5 time units, and then aft [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string WeekThree_Task5_Intro {
+            get {
+                return ResourceManager.GetString("WeekThree_Task5_Intro", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to That&apos;s it. Press any key to return.
         /// </summary>
         internal static string WeekTwo_ReturnToPreviousMenu_ {

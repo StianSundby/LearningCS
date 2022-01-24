@@ -274,4 +274,29 @@ Hello and welcome, [name]' instead.
 
 Press any key to continue...</value>
   </data>
+  <data name="WeekThree_Task4_Intro" xml:space="preserve">
+    <value>Task 4 - Betting on a football match:
+In this assignment we were given some prewritten code, that we were to rewrite and
+make more objectoriented. In addition, the code was to do this:
+"Imagine you've placed a bet on a match, and want to know how many correct bets you have.
+For now we're just going to simulate one match. The code reads what the user bet, valid bets are
+H, U or B. But also HU, HB and UB for halfgrade and HUB for fullgrade."
+I don't know what the bets mean, but I assume they're Home, Draw and Away.
+Press any key to continue...</value>
+  </data>
+  <data name="WeekThree_Task5_Intro" xml:space="preserve">
+    <value>Task 5 - CSGO in the console:
+This task was about recreating the core gamemechanics of Counter Strike Global Offensive
+as a console application. Which means this:
+    -One team consists of 5 members, each member has a value tracking if they are alive or dead.
+    -The terrorist team has a FindBombSite() method and a KillCounterTerrorist() method.
+    -Finding the site, and shooting at other players should have a random chance of succeeding.
+    -Planting the bomb should take 5 time units, and then after it's been planted, 15 until it explodes.
+    -Counter Terrorists has a DefuseBomb() method which takes 5 time units to complete.
+    -They also have a KillTerrorist() method.
+    -The DefuseBomb() method can only be called once all the Terrorists are dead.
+    -If the bomb is defused, CT wins. If it blows T wins. If all CT dies, T wins.
+
+Press any key to start a game...</value>
+  </data>
 </root>
