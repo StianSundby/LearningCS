@@ -29,6 +29,7 @@ namespace LearningCS
         {
             Console.Clear();
             Console.WriteLine(Properties.Resources.WeekThree_Task1_Intro);
+            Console.ReadKey(true);
             var words = ImportWords();
             var count = 200;
             while (count > 0)
