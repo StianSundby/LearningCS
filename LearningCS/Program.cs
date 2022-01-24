@@ -122,8 +122,15 @@ namespace LearningCS
                     new("Task 1 - Read from file", WeekThree.Task1),
                     new("Task 2 - Class properties and constructors", WeekThree.Task2),
                     new("Task 3 - Method overlading", WeekThree.Task3),
-                    new("Task 4 - Reverse Engineering", WeekThree.Task4),
+                    new("Task 4 - Betting on a football game", WeekThree.Task4),
                     new("Task 5 - CSGO clone in the console", WeekThree.Task5),
+                    new("Help", () => Console.WriteLine(HelpText())),
+                    new("Back", ChooseWeek),
+                    new("Exit", () => Environment.Exit(0)),
+                },
+                "WeekFour" => new List<Option>
+                {
+                    new("Task 1 - Read from file", WeekFour.Task1),
                     new("Help", () => Console.WriteLine(HelpText())),
                     new("Back", ChooseWeek),
                     new("Exit", () => Environment.Exit(0)),
