@@ -33,10 +33,10 @@ namespace LearningCS
                 Console.Write("Enter round number 1-12 for the score or X to exit\r\nEnter command:");
                 var command = Console.ReadLine();
                 if (command == "X") break;
-                var matchNo = Convert.ToInt32(command);
-                Console.Write($"Scoring i kamp {matchNo}. \r\nEnter H for hometeam or A for awayteam:");
+                var roundNumber = Convert.ToInt32(command);
+                Console.Write($"Scoring in round {roundNumber}. \r\nEnter H for hometeam or A for awayteam:");
                 var team = Console.ReadLine();
-                rounds.AddGoal(matchNo, team == "H");
+                rounds.AddGoal(roundNumber, team == "H");
                 rounds.Score();
                 rounds.CheckWins();
             }
