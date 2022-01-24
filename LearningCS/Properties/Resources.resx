@@ -299,4 +299,9 @@ as a console application. Which means this:
 
 Press any key to start a game...</value>
   </data>
+  <data name="WeekFour_Task1_Intro" xml:space="preserve">
+    <value>Task 1 - Betting on a football match:
+This assignment is identical to Week3, Task 1 - but instead of doing just 1 match, it was to do 12.
+Press any key to continue...</value>
+  </data>
 </root>

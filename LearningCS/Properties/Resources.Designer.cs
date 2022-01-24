@@ -70,6 +70,17 @@ namespace LearningCS.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Task 1 - Betting on a football match:
+        ///This assignment is identical to Week3, Task 1 - but instead of doing just 1 match, it was to do 12.
+        ///Press any key to continue....
+        /// </summary>
+        internal static string WeekFour_Task1_Intro {
+            get {
+                return ResourceManager.GetString("WeekFour_Task1_Intro", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Task 1 - Writing to Console:.
         /// </summary>
         internal static string WeekOne_Task1_Intro {
