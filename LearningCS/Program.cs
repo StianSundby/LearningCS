@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using static LearningCS.WeekFour;
 
 namespace LearningCS
 {
@@ -131,7 +132,8 @@ namespace LearningCS
                 },
                 "WeekFour" => new List<Option>
                 {
-                    new("Task 1 - Read from file", WeekFour.Task1),
+                    new("Task 1 - Read from file", Task1),
+                    new("Task 2 - Bossfight", Task2),
                     new("Help", () => Console.WriteLine(HelpText())),
                     new("Back", ChooseWeek),
                     new("Exit", () => Environment.Exit(0)),
