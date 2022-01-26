@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace LearningCS
 {
-    public class Program : Declarations
+    public class Program : Menu
     {
         private static string HelpText()
         {
