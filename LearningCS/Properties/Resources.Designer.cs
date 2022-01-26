@@ -81,6 +81,18 @@ namespace LearningCS.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Task 2 - Bossfight:
+        ///This assignment was to make a console app that displays a battle between a hero and a boss.
+        ///There was alot of requirements in ragards to how it was to function, and all of those have been met.
+        ///Press any key to continue....
+        /// </summary>
+        internal static string WeekFour_Task2_Intro {
+            get {
+                return ResourceManager.GetString("WeekFour_Task2_Intro", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Task 1 - Writing to Console:.
         /// </summary>
         internal static string WeekOne_Task1_Intro {

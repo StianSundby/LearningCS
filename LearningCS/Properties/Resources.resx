@@ -304,4 +304,10 @@ Press any key to start a game...</value>
 This assignment is identical to Week3, Task 1 - but instead of doing just 1 match, it was to do 12.
 Press any key to continue...</value>
   </data>
+  <data name="WeekFour_Task2_Intro" xml:space="preserve">
+    <value>Task 2 - Bossfight:
+This assignment was to make a console app that displays a battle between a hero and a boss.
+There was alot of requirements in ragards to how it was to function, and all of those have been met.
+Press any key to continue...</value>
+  </data>
 </root>
