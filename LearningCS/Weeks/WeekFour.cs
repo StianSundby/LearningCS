@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 using System.Threading.Tasks;
 using LearningCS.Resources.TaskClasses;
 using LearningCS.Resources.TaskClasses.Matches;
@@ -44,27 +45,31 @@ namespace LearningCS
             ReturnToPreviousMenu();
         }
 
-        public static async Task Task2()
+        public static async void Task2()
         {
             Console.Clear();
-            Console.WriteLine();
+            Console.WriteLine(Properties.Resources.WeekFour_Task2_Intro);
             Console.ReadKey(true);
-
-            var hero = new BossFight("Hero", 100, 20, 40);
-            var boss = new BossFight("Boss", 400, RandomStrength(0, 30), 10);
-            Console.WriteLine("Press any key to start the fight...\n\n");
-            Console.ReadKey(true);
-
-            while (CheckWin(hero, boss))
-            {
-                await Fight(hero, boss);
-                await Task.Delay(1000);
-                await Fight(boss, hero);
-            }
-            if (hero.Health <= 0) Console.WriteLine($"{boss.Name} has won!");
-            else if (boss.Health <= 0) Console.WriteLine($"{hero.Name} has won!");
-
+            await Start();
             ReturnToPreviousMenu();
+
+
+            async Task Start()
+            {
+                var hero = new BossFight("Hero", 100, 20, 40);
+                var boss = new BossFight("Boss", 400, RandomStrength(0, 30), 10);
+                Console.WriteLine("Press any key to start the fight...\n\n");
+                Console.ReadKey(true);
+
+                while (CheckWin(hero, boss))
+                {
+                    await Fight(hero, boss);
+                    await Task.Delay(1000);
+                    await Fight(boss, hero);
+                }
+                if (hero.Health <= 0) Console.WriteLine($"{boss.Name} has won!");
+                else if (boss.Health <= 0) Console.WriteLine($"{hero.Name} has won!");
+            }
 
             async Task Fight(BossFight character, BossFight enemy)
             {
