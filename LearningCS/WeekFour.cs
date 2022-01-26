@@ -1,5 +1,6 @@
 ﻿using System;
-using System.Threading.Channels;
+using System.Threading.Tasks;
+using LearningCS.Resources.TaskClasses;
 using LearningCS.Resources.TaskClasses.Matches;
 
 namespace LearningCS
@@ -41,6 +42,70 @@ namespace LearningCS
                 rounds.CheckWins();
             }
             ReturnToPreviousMenu();
+        }
+
+        public static async Task Task2()
+        {
+            Console.Clear();
+            Console.WriteLine();
+            Console.ReadKey(true);
+
+            var hero = new BossFight("Hero", 100, 20, 40);
+            var boss = new BossFight("Boss", 400, RandomStrength(0, 30), 10);
+            Console.WriteLine("Press any key to start the fight...\n\n");
+            Console.ReadKey(true);
+
+            while (CheckWin(hero, boss))
+            {
+                await Fight(hero, boss);
+                await Task.Delay(1000);
+                await Fight(boss, hero);
+            }
+            if (hero.Health <= 0) Console.WriteLine($"{boss.Name} has won!");
+            else if (boss.Health <= 0) Console.WriteLine($"{hero.Name} has won!");
+
+            ReturnToPreviousMenu();
+
+            async Task Fight(BossFight character, BossFight enemy)
+            {
+                await Task.Delay(100);
+                if (character.Name == "Boss") character.Strength = RandomStrength(0, 30);
+
+                Console.WriteLine($"{character.Name} tries to attack {enemy.Name}!");
+                await Task.Delay(1000);
+
+                if (character.Stamina == 0)
+                {
+                    Console.WriteLine($"But {character.Name} is out of stamina and has to recharge...\n");
+                    Recharge(character);
+                    return;
+                }
+
+                enemy.Health -= character.Strength;
+                Console.WriteLine($"{enemy.Name} is hit and takes {character.Strength} damage.\n{enemy.Name} has {enemy.Health} HP left...\n");
+                character.Stamina -= 10;
+            }
+
+            bool CheckWin(BossFight hero, BossFight boss)
+            {
+                return hero.Health > 0 && boss.Health > 0;
+            }
+
+            void Recharge(BossFight character)
+            {
+                character.Stamina = character.Name switch
+                {
+                    "Hero" => 40,
+                    "Boss" => 10,
+                    _ => character.Stamina
+                };
+            }
+
+             int RandomStrength(int min, int max)
+            {
+                var randomStrength = new Random().Next(min, max);
+                return randomStrength;
+            }
         }
     }
 }
