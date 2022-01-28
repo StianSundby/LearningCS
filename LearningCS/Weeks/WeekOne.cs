@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace LearningCS
+namespace LearningCS.Weeks
 {
     public class WeekOne
     {
