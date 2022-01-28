@@ -2,6 +2,7 @@
 using System.Threading;
 using System.Threading.Tasks;
 using LearningCS.Resources.TaskClasses;
+using LearningCS.Resources.TaskClasses.CSGO;
 using LearningCS.Resources.TaskClasses.Matches;
 
 namespace LearningCS.Weeks
@@ -279,6 +280,31 @@ namespace LearningCS.Weeks
                     _ => computerChar
                 };
             }
+        }
+
+        public static void Task4()
+        {
+            Console.Clear();
+            Console.WriteLine(Properties.Resources.WeekFour_Task4_Intro);
+            Console.ReadKey();
+
+            Random random = new();
+            var players = new[] {
+                new Player("One", 10, random), 
+                new Player("Two", 10, random),
+            };
+            Player player1;
+            Player player2;
+            do
+            {
+                var playerIndex1 = random.Next(players.Length);
+                var playerIndex2 = (playerIndex1 + 1 + random.Next(2)) % players.Length;
+                player1 = players[playerIndex1];
+                player2 = players[playerIndex2];
+                player1.Play(player1, player2);
+                Thread.Sleep(250);
+            } 
+            while (player1._score != 0 || player2._score != 0);
         }
     }
 }
