@@ -104,6 +104,18 @@ namespace LearningCS.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Task 4 - Players:
+        ///This assignment was about having two players playing against eachother. Each was to have 10 points,
+        ///and each turn one was to lose a point and the other gain one, first one to reach 20 points wins.
+        ///Press any key to continue....
+        /// </summary>
+        internal static string WeekFour_Task4_Intro {
+            get {
+                return ResourceManager.GetString("WeekFour_Task4_Intro", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Task 1 - Writing to Console:.
         /// </summary>
         internal static string WeekOne_Task1_Intro {

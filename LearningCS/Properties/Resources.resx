@@ -315,4 +315,10 @@ Press any key to continue...</value>
 This assignement is pretty self-explanatory; we were to make tic tac toe in the console.
 Press any key to continue...</value>
   </data>
+  <data name="WeekFour_Task4_Intro" xml:space="preserve">
+    <value>Task 4 - Players:
+This assignment was about having two players playing against eachother. Each was to have 10 points,
+and each turn one was to lose a point and the other gain one, first one to reach 20 points wins.
+Press any key to continue...</value>
+  </data>
 </root>
