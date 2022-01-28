@@ -19,12 +19,6 @@ namespace LearningCS.Resources.TaskClasses.Matches
             }
         }
 
-        public bool Stop()
-        {
-            
-            return GameRunning;
-        }
-
         public void AddGoal(int roundNumber, bool homeTeam)
         {
             var index = roundNumber - 1;
