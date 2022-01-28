@@ -310,4 +310,9 @@ This assignment was to make a console app that displays a battle between a hero 
 There was alot of requirements in ragards to how it was to function, and all of those have been met.
 Press any key to continue...</value>
   </data>
+  <data name="WeekFour_Task3_Intro" xml:space="preserve">
+    <value>Task 3 - Tic Tac Toe:
+This assignement is pretty self-explanatory; we were to make tic tac toe in the console.
+Press any key to continue...</value>
+  </data>
 </root>

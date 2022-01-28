@@ -93,6 +93,17 @@ namespace LearningCS.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Task 3 - Tic Tac Toe:
+        ///This assignement is pretty self-explanatory; we were to make tic tac toe in the console.
+        ///Press any key to continue....
+        /// </summary>
+        internal static string WeekFour_Task3_Intro {
+            get {
+                return ResourceManager.GetString("WeekFour_Task3_Intro", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Task 1 - Writing to Console:.
         /// </summary>
         internal static string WeekOne_Task1_Intro {
