@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace LearningCS.Resources.TaskClasses.CSGO
 {
-    internal class Terrorist : Player
+    internal class Terrorist : CSGOPlayer
     {
 
         public Terrorist(string name) : base(name)
@@ -19,7 +19,7 @@ namespace LearningCS.Resources.TaskClasses.CSGO
             return success;
         }
 
-        public static Task<Task> PlantBomb(List<Player> teamList)
+        public static Task<Task> PlantBomb(List<CSGOPlayer> teamList)
         {
             var anyoneAlive = teamList.FindAll(x => x.IsDead == false).ToList();
             if (anyoneAlive.Count == 0) return Task.FromResult(Task.CompletedTask);
@@ -50,7 +50,7 @@ namespace LearningCS.Resources.TaskClasses.CSGO
             return Task.FromResult(Task.CompletedTask);
         }
 
-        public static void KillCounterTerrorist(Player ct, bool allDead, bool enemiesAlive)
+        public static void KillCounterTerrorist(CSGOPlayer ct, bool allDead, bool enemiesAlive)
         {
             if (!enemiesAlive) return;
             switch (allDead)

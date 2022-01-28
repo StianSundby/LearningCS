@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 
 namespace LearningCS.Resources.TaskClasses.CSGO
 {
-    internal class CounterTerrorist : Player
+    internal class CounterTerrorist : CSGOPlayer
     {
         public CounterTerrorist(string name) : base(name)
         {
@@ -20,7 +20,7 @@ namespace LearningCS.Resources.TaskClasses.CSGO
             CounterStrike.GameEnded = true;
         }
 
-        public static async Task KillTerrorist(Player t, bool allDead, bool enemiesAlive)
+        public static async Task KillTerrorist(CSGOPlayer t, bool allDead, bool enemiesAlive)
         {
             if (!enemiesAlive) return;
             switch (CounterStrike.IsPlanted)

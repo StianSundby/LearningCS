@@ -7,8 +7,8 @@ namespace LearningCS.Resources.TaskClasses.CSGO
 {
     internal class CounterStrike
     {
-        private static readonly List<Player> T = new();
-        private static readonly List<Player> Ct = new();
+        private static readonly List<CSGOPlayer> T = new();
+        private static readonly List<CSGOPlayer> Ct = new();
         public static bool IsPlanted = false;
         public static bool IsDefused = false;
         public static bool GameEnded = false;
@@ -30,7 +30,7 @@ namespace LearningCS.Resources.TaskClasses.CSGO
             Console.WriteLine("\nGame over.\n");
         }
 
-        private static async Task PickRandomPlayer(List<Player> playerList, List<Player> enemyList, string team)
+        private static async Task PickRandomPlayer(List<CSGOPlayer> playerList, List<CSGOPlayer> enemyList, string team)
         {
             Random rnd = new();
             var teamAliveList = playerList.FindAll(x => x.IsDead == false).ToList();
@@ -64,7 +64,7 @@ namespace LearningCS.Resources.TaskClasses.CSGO
 
         private static void AddTeamMembers()
         {
-            T.AddRange(new List<Player>()
+            T.AddRange(new List<CSGOPlayer>()
             {
                 new Terrorist("T-Derk"),
                 new Terrorist("T-Gnerk"),
@@ -72,7 +72,7 @@ namespace LearningCS.Resources.TaskClasses.CSGO
                 new Terrorist("T-Burk"),
                 new Terrorist("T-Snurk"),
             });
-            Ct.AddRange(new List<Player>()
+            Ct.AddRange(new List<CSGOPlayer>()
             {
                 new CounterTerrorist("CT-Gnikk"),
                 new CounterTerrorist("CT-Gnukk"),
