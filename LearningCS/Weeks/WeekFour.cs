@@ -2,7 +2,6 @@
 using System.Threading;
 using System.Threading.Tasks;
 using LearningCS.Resources.TaskClasses;
-using LearningCS.Resources.TaskClasses.CSGO;
 using LearningCS.Resources.TaskClasses.Matches;
 
 namespace LearningCS.Weeks
