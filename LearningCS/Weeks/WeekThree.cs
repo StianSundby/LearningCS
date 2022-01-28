@@ -1,12 +1,12 @@
 ﻿using System;
-using System.IO;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 using LearningCS.Resources;
 using LearningCS.Resources.TaskClasses;
 using LearningCS.Resources.TaskClasses.CSGO;
 
-namespace LearningCS
+namespace LearningCS.Weeks
 {
     internal class WeekThree
     {
