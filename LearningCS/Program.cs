@@ -88,6 +88,7 @@ namespace LearningCS
                 new("Week 2", () => ChooseTask("WeekTwo")),
                 new("Week 3", () => ChooseTask("WeekThree")),
                 new("Week 4", () => ChooseTask("WeekFour")),
+                new("Week 5", () => ChooseTask("WeekFive")),
                 new("Help", () =>  Console.WriteLine(HelpText())),
                 new("Exit", () => Environment.Exit(0)),
             };
@@ -137,6 +138,14 @@ namespace LearningCS
                     new("Task 2 - Bossfight", Task2),
                     new("Task 3 - Tic Tac Toe", Task3),
                     new("Task 4 - Players", Task4),
+                    new("Task 5 - Adventure Game", Task5),
+                    new("Help", () => Console.WriteLine(HelpText())),
+                    new("Back", ChooseWeek),
+                    new("Exit", () => Environment.Exit(0)),
+                },
+                "WeekFive" => new List<Option>
+                {
+                    new("Task 1 - Unit testing", WeekFive.Task1),
                     new("Help", () => Console.WriteLine(HelpText())),
                     new("Back", ChooseWeek),
                     new("Exit", () => Environment.Exit(0)),
