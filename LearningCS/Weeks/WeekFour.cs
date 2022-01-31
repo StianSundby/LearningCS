@@ -2,6 +2,7 @@
 using System.Threading;
 using System.Threading.Tasks;
 using LearningCS.Resources.TaskClasses;
+using LearningCS.Resources.TaskClasses.AdventureGame;
 using LearningCS.Resources.TaskClasses.Matches;
 
 namespace LearningCS.Weeks
@@ -304,6 +305,11 @@ namespace LearningCS.Weeks
                 Thread.Sleep(250);
             } 
             while (player1._score != 0 || player2._score != 0);
+        }
+
+        public static void Task5() //TODO
+        {
+            Game.AdventureGame();
         }
     }
 }
