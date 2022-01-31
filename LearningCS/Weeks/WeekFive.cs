@@ -20,6 +20,7 @@ namespace LearningCS.Weeks
         public static void Task1()
         {
             Console.Clear();
+            Console.WriteLine("Unit testing");
         }
     }
 }
