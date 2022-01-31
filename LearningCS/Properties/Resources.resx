@@ -321,4 +321,23 @@ This assignment was about having two players playing against eachother. Each was
 and each turn one was to lose a point and the other gain one, first one to reach 20 points wins.
 Press any key to continue...</value>
   </data>
+  <data name="WeekFive_Task1_Intro" xml:space="preserve">
+    <value>Task 1 - Unit Testing
+There is nothing to show here so feel free to skip.
+This assignemnt was pretty extensive - we were to write a program that has the following variables:
+enum WaterState, Temperature and Amount.
+We were given all the unit tests pre-written, and we had to write the program based on those, we
+did this to learn Test Driven Development (TDD) where the goal is write the nessecary tests and 
+then start programming with the goal of getting all the tests to pass.
+The program was about spending calories (energy) to heat up water or ice, and change its state
+accordingly. Calories needed to melt ice was to be 80, and calories needed to evaporate water/
+turn water into gas was 600. 
+Then we just provide the method with these parameters as we call it, and program it to handle them
+correctly / do the correct calculations.
+There were a total of 15 unit tests that had to pass. I ended up getting rid of three of them which
+were redundant, so 13 in my case.
+After a good while of fiddeling I got it working, but I can't show any results here. Just take my word for it!
+
+Press any key to return to the menu...</value>
+  </data>
 </root>

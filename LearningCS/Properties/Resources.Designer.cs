@@ -70,6 +70,22 @@ namespace LearningCS.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Task 1 - Unit Testing
+        ///There is nothing to show here so feel free to skip.
+        ///This assignemnt was pretty extensive - we were to write a program that has the following variables:
+        ///enum WaterState, Temperature and Amount.
+        ///We were given all the unit tests pre-written, and we had to write the program based on those, we
+        ///did this to learn Test Driven Development (TDD) where the goal is write the nessecary tests and 
+        ///then start programming with the goal of getting all the tests to pass.
+        ///The program was about spe [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string WeekFive_Task1_Intro {
+            get {
+                return ResourceManager.GetString("WeekFive_Task1_Intro", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Task 1 - Betting on a football match:
         ///This assignment is identical to Week3, Task 1 - but instead of doing just 1 match, it was to do 12.
         ///Press any key to continue....
