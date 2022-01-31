@@ -14,13 +14,15 @@ namespace LearningCS.Weeks
         public static void GoBack()
         {
             Console.Clear();
-            Program.ChooseTask("WeekFour");
+            Program.ChooseTask("WeekFive");
         }
 
         public static void Task1()
         {
             Console.Clear();
-            Console.WriteLine("Unit testing");
+            Console.WriteLine(Properties.Resources.WeekFive_Task1_Intro);
+            Console.ReadKey(true);
+            ReturnToPreviousMenu();
         }
     }
 }
