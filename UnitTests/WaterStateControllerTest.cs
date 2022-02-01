@@ -1,5 +1,5 @@
 ﻿using System;
-using LearningCS.Resources.TaskClasses.Water;
+using LearningCS.Resources.TaskClasses.Standalone_classes;
 using NUnit.Framework;
 
 namespace UnitTests
@@ -10,7 +10,7 @@ namespace UnitTests
         [Test]
         public void Test01WaterAt20Degrees()
         {
-            var water = new LearningCS.Resources.TaskClasses.Water.Water(50, 20);
+            var water = new Water(50, 20);
             Assert.AreEqual(WaterState.Fluid, water.State);
             Assert.AreEqual(20, water.Temperature);
             Assert.AreEqual(50, water.Amount);
@@ -21,7 +21,7 @@ namespace UnitTests
         [Test]
         public void Test02WaterAtMinus20Degrees()
         {
-            var water = new LearningCS.Resources.TaskClasses.Water.Water(50, -20);
+            var water = new Water(50, -20);
             Assert.AreEqual(WaterState.Ice, water.State);
             Assert.AreEqual(-20, water.Temperature);
         }
@@ -31,7 +31,7 @@ namespace UnitTests
         [Test]
         public void Test03WaterAt120Degrees()
         {
-            var water = new LearningCS.Resources.TaskClasses.Water.Water(50, 120);
+            var water = new Water(50, 120);
             Assert.AreEqual(WaterState.Gas, water.State);
             Assert.AreEqual(120, water.Temperature);
         }
@@ -47,7 +47,7 @@ namespace UnitTests
         {
             var exception = Assert.Throws<ArgumentException>(() =>
             {
-                new LearningCS.Resources.TaskClasses.Water.Water(50, 100);
+                new Water(50, 100);
             });
 
             Assert.That(exception?.Message, Is.EqualTo("When temperature is 0 or 100, you must provide a value for proportion"));
@@ -58,7 +58,7 @@ namespace UnitTests
         [Test]
         public void Test05WaterAt100Degrees()
         {
-            var water = new LearningCS.Resources.TaskClasses.Water.Water(50, 100, 0.3);
+            var water = new Water(50, 100, 0.3);
             Assert.AreEqual(WaterState.FluidAndGas, water.State);
             Assert.AreEqual(100, water.Temperature);
             Assert.AreEqual(0.3, water.ProportionFirstState);
@@ -70,7 +70,7 @@ namespace UnitTests
         //Tests that when we add energy, the temperature increases with the right amount
         public void Test06AddEnergy1()
         {
-            var water = new LearningCS.Resources.TaskClasses.Water.Water(4, 10);
+            var water = new Water(4, 10);
             water.AddEnergy(10);
             Assert.AreEqual(12.5, water.Temperature);
         }
@@ -80,7 +80,7 @@ namespace UnitTests
         [Test]
         public void Test07AddEnergy2()
         {
-            var water = new LearningCS.Resources.TaskClasses.Water.Water(4, -10);
+            var water = new Water(4, -10);
             water.AddEnergy(10);
             Assert.AreEqual(-7.5, water.Temperature);
         }
@@ -92,7 +92,7 @@ namespace UnitTests
         //Test that the temperature stops at 0 if we don't have enough energy to melt it all.
         public void Test10AddEnergy3()
         {
-            var water = new LearningCS.Resources.TaskClasses.Water.Water(4, -10);
+            var water = new Water(4, -10);
             water.AddEnergy(168);
             Assert.AreEqual(0, water.Temperature);
             Assert.AreEqual(WaterState.IceAndFluid, water.State);
@@ -104,7 +104,7 @@ namespace UnitTests
         [Test]
         public void Test11AddEnergy4()
         {
-            var water = new LearningCS.Resources.TaskClasses.Water.Water(4, -10);
+            var water = new Water(4, -10);
             water.AddEnergy(360);
             Assert.AreEqual(0, water.Temperature);
             Assert.AreEqual(WaterState.Fluid, water.State);
@@ -116,7 +116,7 @@ namespace UnitTests
         //Test that all excess energy after melting goes to heating with the correct amount of degrees
         public void Test12AddEnergy5()
         {
-            var water = new LearningCS.Resources.TaskClasses.Water.Water(4, -10);
+            var water = new Water(4, -10);
             water.AddEnergy(400);
             Assert.AreEqual(10, water.Temperature);
             Assert.AreEqual(WaterState.Fluid, water.State);
@@ -127,7 +127,7 @@ namespace UnitTests
         [Test]
         public void Test13FluidToGasA()
         {
-            var water = new LearningCS.Resources.TaskClasses.Water.Water(10, 70);
+            var water = new Water(10, 70);
             water.AddEnergy(900);
             Assert.AreEqual(100, water.Temperature);
             Assert.AreEqual(WaterState.FluidAndGas, water.State);
@@ -139,7 +139,7 @@ namespace UnitTests
         [Test]
         public void Test14FluidToGasB()
         {
-            var water = new LearningCS.Resources.TaskClasses.Water.Water(10, 70);
+            var water = new Water(10, 70);
             water.AddEnergy(6300);
             Assert.AreEqual(100, water.Temperature);
             Assert.AreEqual(WaterState.Gas, water.State);
@@ -150,7 +150,7 @@ namespace UnitTests
         [Test]
         public void Test14FluidToGasC()
         {
-            var water = new LearningCS.Resources.TaskClasses.Water.Water(10, 70);
+            var water = new Water(10, 70);
             water.AddEnergy(6400);
             Assert.AreEqual(110, water.Temperature);
             Assert.AreEqual(WaterState.Gas, water.State);
