@@ -147,6 +147,7 @@ namespace LearningCS
                 {
                     new("Task 1 - Unit testing", WeekFive.Task1),
                     new("Task 2 - Bottle Math", WeekFive.Task2),
+                    new("Task 3 - Bottle Math Unit Test", WeekFive.Task3),
                     new("Help", () => Console.WriteLine(HelpText())),
                     new("Back", ChooseWeek),
                     new("Exit", () => Environment.Exit(0)),
