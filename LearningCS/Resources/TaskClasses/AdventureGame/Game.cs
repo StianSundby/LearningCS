@@ -101,7 +101,7 @@ namespace LearningCS.Resources.TaskClasses.AdventureGame
             var player = _model.Player;
             var room = player.Room;
             var header = room.Won ? "Congratulations! You finished the game!" : $"You are in room {room.Name}";
-            var inventory = player.Inventory() == null ? "no items" : player.Inventory();
+            var inventory = player != null && player.Inventory() == null ? "no items" : player.Inventory();
             Console.WriteLine($"{header}\n\nInside the room, you see: {room.GetContent()}\n\n" +
                               $"You have: {inventory}\n\nDoors:\n{_model.AvailableDoors()}");
         }
