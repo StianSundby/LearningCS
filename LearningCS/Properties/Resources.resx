@@ -366,4 +366,12 @@ I will preface by saying that I did not solve this completely on my own - I didn
 look at the solution every now and again.
 Press any key to continue...</value>
   </data>
+  <data name="WeekFive_Task3_Intro" xml:space="preserve">
+    <value>Task 3 - Bottle Math Unit Testing;
+This assignement is a follow up to the previous one. We had to write three unit tests
+using the NUnit library to test the logic. Three different input sets, where we compare
+the result we get versus the result we expect. If they're the same then the test succeeded.
+I cant actually show those tests here, but they all went through.
+Press any key to continue...</value>
+  </data>
 </root>

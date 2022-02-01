@@ -119,6 +119,20 @@ namespace LearningCS.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Task 3 - Bottle Math Unit Testing;
+        ///This assignement is a follow up to the previous one. We had to write three unit tests
+        ///using the NUnit library to test the logic. Three different input sets, where we compare
+        ///the result we get versus the result we expect. If they&apos;re the same then the test succeeded.
+        ///I cant actually show those tests here, but they all went through.
+        ///Press any key to continue....
+        /// </summary>
+        internal static string WeekFive_Task3_Intro {
+            get {
+                return ResourceManager.GetString("WeekFive_Task3_Intro", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Task 1 - Betting on a football match:
         ///This assignment is identical to Week3, Task 1 - but instead of doing just 1 match, it was to do 12.
         ///Press any key to continue....
