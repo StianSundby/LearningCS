@@ -1,6 +1,6 @@
 ﻿namespace LearningCS.Resources.TaskClasses.BottleMath
 {
-    internal class Simulation
+    public class Simulation
     {
         public int WantedResult { get; }
         public Bottle Bottle1 { get; }

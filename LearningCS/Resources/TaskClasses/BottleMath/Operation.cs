@@ -2,7 +2,7 @@
 
 namespace LearningCS.Resources.TaskClasses.BottleMath
 {
-    internal class Operation
+    public class Operation
     {
         private readonly int[] _operations;
         private readonly Simulation _simulation;

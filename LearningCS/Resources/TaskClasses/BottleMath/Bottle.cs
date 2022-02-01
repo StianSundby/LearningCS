@@ -2,7 +2,7 @@
 
 namespace LearningCS.Resources.TaskClasses.BottleMath
 {
-    internal class Bottle
+    public class Bottle
     {
         public int Capacity { get; }
         public int Content { get; private set; }
