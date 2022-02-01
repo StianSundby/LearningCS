@@ -34,15 +34,8 @@ namespace LearningCS.Weeks
             Console.ReadKey(true);
             Console.WriteLine(Properties.Resources.WeekFive_Task2_Description);
 
-            var input = Console.ReadLine();
-            if (input != null && input.Contains(' ')) input.Split(' ');
-            else if (input != null && !input.Contains(' ')) input.ToArray();
-            else
-            {
-                Console.WriteLine("Input was not in correct format.\nPress any key to cancel...");
-                Console.ReadKey(true);
-                ReturnToPreviousMenu();
-            }
+            var input = Console.ReadLine().Split(' ');
+
             Console.Clear();
 
             var wantedResult = Convert.ToInt32(input[0]);
@@ -53,6 +46,14 @@ namespace LearningCS.Weeks
 
             Console.WriteLine(operationSet.GetDescription());
             Console.WriteLine("\n\nPress any key to return...");
+            Console.ReadKey(true);
+            ReturnToPreviousMenu();
+        }
+
+        public static void Task3()
+        {
+            Console.Clear();
+            Console.WriteLine(Properties.Resources.WeekFive_Task3_Intro);
             Console.ReadKey(true);
             ReturnToPreviousMenu();
         }
