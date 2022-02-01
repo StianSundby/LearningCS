@@ -86,6 +86,39 @@ namespace LearningCS.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to First parameter:  your desired result
+        ///Second parameter: the capacity of bottle 1
+        ///Third parameter:  the capacity of bottle 2
+        ///
+        ///Example: bottle 1 has a capacity of 5
+        ///                 bottle 2 has a capactiy of 7
+        ///                 we want to have just 1 in either bottle
+        ///
+        ///Enter your paramteres seperated by a space, example:
+        ///                  1 5 7.
+        /// </summary>
+        internal static string WeekFive_Task2_Description {
+            get {
+                return ResourceManager.GetString("WeekFive_Task2_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Task 2 - Bottle Math:
+        ///This assignment was about simulating ways to solve a problem until we find the solution.
+        ///The problem in this case, is the famous &quot;Bottle puzzle&quot;, where you have to pour water back
+        ///and forth until you get the wanted result. For example:
+        ///If you have 1 bottle that can hold 7L and one that can hold 5L. The things you can do is
+        ///pour one bottle into the other, empty a bottle, and lastly you can refill it from the tap.
+        ///How, in this case, would you go about getting one of the bottles to  [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string WeekFive_Task2_Intro {
+            get {
+                return ResourceManager.GetString("WeekFive_Task2_Intro", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Task 1 - Betting on a football match:
         ///This assignment is identical to Week3, Task 1 - but instead of doing just 1 match, it was to do 12.
         ///Press any key to continue....

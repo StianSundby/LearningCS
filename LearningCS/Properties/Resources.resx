@@ -340,4 +340,30 @@ After a good while of fiddeling I got it working, but I can't show any results h
 
 Press any key to return to the menu...</value>
   </data>
+  <data name="WeekFive_Task2_Description" xml:space="preserve">
+    <value>First parameter:  your desired result
+Second parameter: the capacity of bottle 1
+Third parameter:  the capacity of bottle 2
+
+Example: bottle 1 has a capacity of 5
+                 bottle 2 has a capactiy of 7
+                 we want to have just 1 in either bottle
+
+Enter your paramteres seperated by a space, example:
+                  1 5 7</value>
+  </data>
+  <data name="WeekFive_Task2_Intro" xml:space="preserve">
+    <value>Task 2 - Bottle Math:
+This assignment was about simulating ways to solve a problem until we find the solution.
+The problem in this case, is the famous "Bottle puzzle", where you have to pour water back
+and forth until you get the wanted result. For example:
+If you have 1 bottle that can hold 7L and one that can hold 5L. The things you can do is
+pour one bottle into the other, empty a bottle, and lastly you can refill it from the tap.
+How, in this case, would you go about getting one of the bottles to just have 1L?
+
+The goal of this program is to solve this problem for you.
+I will preface by saying that I did not solve this completely on my own - I didn have to
+look at the solution every now and again.
+Press any key to continue...</value>
+  </data>
 </root>
