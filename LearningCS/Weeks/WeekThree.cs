@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
-using LearningCS.Resources;
-using LearningCS.Resources.TaskClasses;
 using LearningCS.Resources.TaskClasses.CSGO;
+using LearningCS.Resources.TaskClasses.Standalone_classes;
 
 namespace LearningCS.Weeks
 {

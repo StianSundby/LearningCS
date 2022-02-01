@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Threading;
 using System.Threading.Tasks;
-using LearningCS.Resources.TaskClasses;
 using LearningCS.Resources.TaskClasses.AdventureGame;
 using LearningCS.Resources.TaskClasses.Matches;
+using LearningCS.Resources.TaskClasses.Standalone_classes;
 
 namespace LearningCS.Weeks
 {
@@ -304,7 +304,7 @@ namespace LearningCS.Weeks
                 player1.Play(player1, player2);
                 Thread.Sleep(250);
             } 
-            while (player1._score != 0 || player2._score != 0);
+            while (player1.Score != 0 || player2.Score != 0);
         }
 
         public static void Task5() //TODO
